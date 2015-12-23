@@ -41,7 +41,7 @@ function errorAlert(error){
 
 // css
 gulp.task('css', function () {
-  return gulp.src('./sass/all*.scss')
+  return gulp.src('sass/all*.scss')
     .pipe(plumber({errorHandler: errorAlert}))
     .pipe(wait(500))
     .pipe(sass({ includePaths : ['_/sass/'] })) 
