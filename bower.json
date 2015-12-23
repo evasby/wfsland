@@ -1,0 +1,8 @@
+{
+  "name": "landingpage",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "1.11",
+    "jquery.placeholder.js": "~0.1.0"
+  }
+}

@@ -1,0 +1,63 @@
+@mixin old-ie {
+  @if $old-ie {
+    @content;
+  }
+}
+//*********************************************************************************/
+@mixin link($normal, $hover){
+  color:$normal;
+    &:link{color:$normal;};
+    &:visited{color:$normal;};
+    &:hover{color:$hover;};
+    &:active{color:$normal;}; 
+    //&:focus{color:$normal;}; 
+}
+//*********************************************************************************/
+@mixin clearfix{
+  &:before,
+  &:after{
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after{
+    clear: both;
+  }
+  @include old-ie{
+    *zoom: 1;
+  }
+}
+
+//*********************************************************************************/
+@mixin beforeIE7{
+  &:before{
+    content: "";
+    @content;
+  }
+  @include old-ie{
+    *zoom: expression(
+    this.runtimeStyle.zoom="1",
+    this.appendChild( document.createElement("small") ).className="before"
+    );
+    .before{
+      @content;
+    }
+  }
+}
+@mixin after{
+  &:after{
+    content: "";
+    @content;
+  }
+  @include old-ie{
+    zoom: expression(
+    this.runtimeStyle.zoom="1",
+    this.appendChild( document.createElement("small") ).className="after"
+    );
+    .after{
+      @content;
+    }
+  }
+}
+//*********************************************************************************/

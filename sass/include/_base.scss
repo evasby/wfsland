@@ -1,0 +1,27 @@
+body{
+
+}
+textarea{
+  resize: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+input{
+  box-shadow: none;
+  border-radius: 0px;
+}
+button, input[type="reset"], input[type="button"], input[type="submit"] {
+  box-shadow: none;
+  border-radius: 0px;
+}
+a, input, textarea{
+  &:focus{
+    outline: none;
+  }
+}
+.hide{
+  display: none;
+}
+.inner{
+
+}
