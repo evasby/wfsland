@@ -1,0 +1,14 @@
+.logo{
+  @include span(4);
+  display: block;
+  //height: 59px;
+  /*white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+  background: url('../images/wfs.png') no-repeat;*/
+  &_image{
+    width: 100%;
+    max-width: 293px;
+    height: auto;
+  }
+}

@@ -1,5 +1,51 @@
-body{
+@import "../../app/bower_components/susy/sass/_susy.scss";
+// Susy
+$susy: (
+  columns: 12,
+  gutters: 0,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
 
+  debug: (
+    image: show,
+    color: rgba(#66f, .5),
+    output: background,
+    toggle: top right,
+  )
+);
+//gutters - пробелы между колонками составляют 1/4 от расстояния целой колонки
+.main{
+  @include container(300px);
+  @media all and (min-width: 481px) {
+    @include container(960px);
+  }
+}
+.about{
+  
+}
+.test{
+  //background-color: #fff;
+  //@include span(12);
+  @media all and (min-width: 481px) {
+    @include span(4);
+    &:last-child{
+      @include span(4 last);
+    }
+  }
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  /*font-family: "Raleway", sans-serif
+  font-weight: normal
+  font-size: 14px
+  min-width: 320px
+  position: relative
+  line-height: 1.42857
+  -webkit-font-smoothing: antialised*/
+  min-width: 300px;
 }
 textarea{
   resize: none;

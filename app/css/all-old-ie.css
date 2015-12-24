@@ -2628,6 +2628,64 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-style: normal;
   font-weight: normal; }
 
+.main {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(102, 102, 255, 0.5)), to(rgba(179, 179, 255, 0.5)));
+  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.5), rgba(179, 179, 255, 0.5));
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.5), rgba(179, 179, 255, 0.5));
+  background-size: 8.33333%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top; }
+  .main:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  @media all and (min-width: 481px) {
+    .main {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(102, 102, 255, 0.5)), to(rgba(179, 179, 255, 0.5)));
+      background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.5), rgba(179, 179, 255, 0.5));
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.5), rgba(179, 179, 255, 0.5));
+      background-size: 8.33333%;
+      background-origin: content-box;
+      background-clip: content-box;
+      background-position: left top; }
+      .main:after {
+        content: " ";
+        display: block;
+        clear: both; } }
+
+@media all and (min-width: 481px) {
+  .test {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left; }
+    .test:last-child {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 33.33333%;
+      float: right; } }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  /*font-family: "Raleway", sans-serif
+  font-weight: normal
+  font-size: 14px
+  min-width: 320px
+  position: relative
+  line-height: 1.42857
+  -webkit-font-smoothing: antialised*/
+  min-width: 300px; }
+
 textarea {
   resize: none;
   -webkit-box-shadow: none;
@@ -2652,3 +2710,31 @@ a:focus, input:focus, textarea:focus {
 
 .hide {
   display: none; }
+
+.logo {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.33333%;
+  float: left;
+  display: block;
+  /*white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+  background: url('../images/wfs.png') no-repeat;*/ }
+  .logo_image {
+    width: 100%;
+    max-width: 293px;
+    height: auto; }
+
+.address {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 41.66667%;
+  float: left; }
+
+.phone {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%;
+  float: left;
+  text-align: right; }
