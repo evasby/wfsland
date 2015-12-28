@@ -22,10 +22,10 @@ body{
   font-size: 16px;
   line-height: 18px;
   //-webkit-font-smoothing: antialised;
-  min-width: 300px;
+  min-width: 320px;
 }
 .inner{
-  @include container(300px);
+  @include container(320px);
   @media all and (min-width: 481px) {
     @include container(960px);
   }
@@ -45,6 +45,16 @@ h1{
     color: #fff;
     text-align: center;
     text-transform: uppercase;
+  }
+}
+h2{
+  font-family: "GothaProReg", sans-serif;
+  color: #1b1b1b;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 27px 0px 27px 0px;
+  b, strong{
+    font-family: "GothaProBlack", sans-serif;
   }
 }
 b, strong{

@@ -85,13 +85,23 @@ gulp.task('fonts', function() {
 });
 
 // Build
-gulp.task('build', ['clean', 'imageMin', 'fonts'], function () {
+/*gulp.task('build', ['clean', 'imageMin', 'fonts'], function () {
     var assets = useref.assets();
     return gulp.src('app/*.html')
       .pipe(assets)
       .pipe(gulpif('*.js', uglify()))
-      .pipe(gulpif('*.css', minifyCss()))
+      .pipe(gulpif('*.css', minifyCss({compatibility: 'ie7'})))
       .pipe(assets.restore())
+      .pipe(useref())
+      .pipe(gulp.dest('dist'));
+});*/
+gulp.task('build', ['clean'], function () {
+    //var assets = useref.assets();
+    return gulp.src('app/*.html')
+      //.pipe(assets)
+      .pipe(gulpif('*.js', uglify()))
+      .pipe(gulpif('*.css', minifyCss({compatibility: 'ie7'})))
+      //.pipe(assets.restore())
       .pipe(useref())
       .pipe(gulp.dest('dist'));
 });
