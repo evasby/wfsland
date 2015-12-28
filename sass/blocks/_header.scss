@@ -1,3 +1,42 @@
 .header{
-  
+  $susy2: (
+    columns: 12,
+    gutters: 0,
+    math: fluid,
+    output: float,
+    gutter-position: inside,
+    flow: rtl,
+  );
+  @include layout($susy2);
+  position: relative;
+  background: url('../images/header-bac-480-1.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  padding: 42px 0px 0px 0px;
+  min-height: 350px;
+  @media all and (min-width: 481px) {
+    background: url('../images/header-bac-1920-1.jpg') 50% 50% no-repeat;
+    background-size: cover;
+  }
+  &_top{
+    @include clearfix;
+  }
+  &_logo{
+    display: none;
+    /*@media all and (min-width: 481px) {
+     @include span(4);
+     display: block;
+    }*/
+  }
+  &_address{
+    //@include span(5);
+    /*@media all and (min-width: 481px) {
+      @include span(5);
+    }*/
+  }
+  &_phone{
+    //@include span(3);
+    /*@media all and (min-width: 481px) {
+     @include span(3);
+    }*/
+  }
 }

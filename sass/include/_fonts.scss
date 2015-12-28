@@ -1,10 +1,33 @@
-/* font-family: "PTSansRegular"; */
 @font-face {
-    font-family: "PTSansRegular";
-    src: url("../fonts/PTSansRegular/PTSansRegular.eot");
-    src: url("../fonts/PTSansRegular/PTSansRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/PTSansRegular/PTSansRegular.woff") format("woff"),
-    url("../fonts/PTSansRegular/PTSansRegular.ttf") format("truetype");
+    font-family: 'GothaProReg';
+    src: url('../fonts/GothaProReg.eot');
+    src: url('../fonts/GothaProReg.eot') format('embedded-opentype'),
+         url('../fonts/GothaProReg.woff2') format('woff2'),
+         url('../fonts/GothaProReg.woff') format('woff'),
+         url('../fonts/GothaProReg.ttf') format('truetype'),
+         url('../fonts/GothaProReg.svg#GothaProReg') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'GothaProBold';
+    src: url('../fonts/GothaProBol.eot');
+    src: url('../fonts/GothaProBol.eot') format('embedded-opentype'),
+         url('../fonts/GothaProBol.woff2') format('woff2'),
+         url('../fonts/GothaProBol.woff') format('woff'),
+         url('../fonts/GothaProBol.ttf') format('truetype'),
+         url('../fonts/GothaProBol.svg#GothaProBol') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'GothaProBlack';
+    src: url('../fonts/GothaProBla.eot');
+    src: url('../fonts/GothaProBla.eot') format('embedded-opentype'),
+         url('../fonts/GothaProBla.woff2') format('woff2'),
+         url('../fonts/GothaProBla.woff') format('woff'),
+         url('../fonts/GothaProBla.ttf') format('truetype'),
+         url('../fonts/GothaProBla.svg#GothaProBla') format('svg');
     font-style: normal;
     font-weight: normal;
 }

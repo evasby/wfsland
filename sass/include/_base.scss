@@ -6,20 +6,49 @@ $susy: (
   math: fluid,
   output: float,
   gutter-position: inside,
+  flow: ltr,
 
-  debug: (
+  /*debug: (
     image: show,
     color: rgba(#66f, .5),
     output: background,
     toggle: top right,
-  )
+  )*/
 );
 //gutters - пробелы между колонками составляют 1/4 от расстояния целой колонки
-.main{
+body{
+  font-family: "GothaProReg", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  //-webkit-font-smoothing: antialised;
+  min-width: 300px;
+}
+.inner{
   @include container(300px);
   @media all and (min-width: 481px) {
     @include container(960px);
   }
+  text-align: center;
+}
+h1{
+  font-family: "GothaProBlack", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  & + p{
+    margin-bottom: 29px;
+    font-size: 11px;
+    line-height: 18px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+b, strong{
+  font-family: "GothaProBold", sans-serif;
 }
 .about{
   
@@ -37,16 +66,7 @@ $susy: (
 *{
   box-sizing: border-box;
 }
-body{
-  /*font-family: "Raleway", sans-serif
-  font-weight: normal
-  font-size: 14px
-  min-width: 320px
-  position: relative
-  line-height: 1.42857
-  -webkit-font-smoothing: antialised*/
-  min-width: 300px;
-}
+
 textarea{
   resize: none;
   box-shadow: none;

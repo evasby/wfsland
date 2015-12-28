@@ -1,0 +1,17 @@
+.button{
+  display: inline-block;
+  padding: 0px 27px;
+  border-bottom: 1px solid #e90f51;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 47px;
+  @include link(#fff, #fff);
+  text-decoration: none;
+  background-color: #bc0a39;
+  background: url('../images/button-bac.png');
+  background: url('../images/button-bac.png'), linear-gradient(to bottom, #cb0c46 0%,#ae082d 100%);
+  box-shadow: inset 0px 5px 10px -5px rgba(233,15,80,1), 0px 5px 0px 0px rgba(154,6,45,1);
+  &:hover{
+    box-shadow: inset 0px -5px 10px -5px rgba(233,15,80,1), 0px 5px 0px 0px rgba(154,6,45,1);
+  }
+}
