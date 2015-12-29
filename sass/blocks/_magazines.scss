@@ -3,7 +3,7 @@
   &_item{
     width: 280px;
     margin: 0 auto;
-    padding-bottom: 37px;
+    padding-bottom: 38px;
     img{
       width: 100%;
       height: auto;
@@ -11,13 +11,13 @@
   }
   &_descr{
     font-size: 16px;
+    line-height: 17px;
     color: #1b1b1b;
     margin-bottom: 23px;
   }
   &_link{
-    font-family: "GothaProBold", sans-serif;
     font-size: 18px;
-    padding: 4px 8px 7px 8px;
+    padding: 1px 8px 5px 8px;
     @include link(#ce0137, #ce0137);
     text-decoration: none;
     border: 1px dashed #ce0137;
