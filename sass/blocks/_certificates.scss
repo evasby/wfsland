@@ -1,0 +1,13 @@
+.certificates{
+  padding-bottom: 10px;
+  &_item{
+    width: 263px;
+    margin: 0 auto 16px auto;
+    box-shadow: 15px 15px 28px -5px rgba(0,0,0,0.4);
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

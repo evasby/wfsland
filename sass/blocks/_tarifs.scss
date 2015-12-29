@@ -1,0 +1,101 @@
+.tarifs{
+  background-color: #131418;
+  background: radial-gradient(ellipse at center, rgba(61,65,79,1) 0%, rgba(19,20,24,1) 100%);
+  h2{
+    color: #ffffff;
+  }
+  &_item{
+    width: 280px;
+    margin: 30px auto 0px auto;
+    padding-top: 60px;
+    border-radius: 3px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  &_h3{
+    font-family: "GothaProBlack", sans-serif;
+    font-size: 16px;
+    line-height: 70px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 20;
+    //overflow: hidden;
+    &__red{
+      transform: rotate(0deg);
+      &:before{
+        content: "";
+        background-color: #c20034;
+        position: absolute;
+        left: -50%;
+        top: 0px;
+        width: 200%;
+        height: 100%;
+        z-index: -1;
+        transform: rotate(-10deg);
+      }
+    }
+    &__yellow{
+      transform: rotate(0deg);
+      &:before{
+        content: "";
+        background-color: #fcc400;
+        position: absolute;
+        left: -50%;
+        top: 0px;
+        width: 200%;
+        height: 100%;
+        z-index: -1;
+        transform: rotate(-10deg);
+      }
+    }
+    &__green{
+      transform: rotate(0deg);
+      &:before{
+        content: "";
+        background-color: #04858a;
+        position: absolute;
+        left: -50%;
+        top: 0px;
+        width: 200%;
+        height: 100%;
+        z-index: -1;
+        transform: rotate(-10deg);
+      }
+    }
+  }
+  &_p{
+    font-size: 30px;
+    line-height: 60px;
+    margin-top: -25px;
+    padding-right: 10px;
+    padding-top: 20px;
+    text-align: right;
+    position: relative;
+    z-index: 10;
+    transform: rotate(0deg);
+    &:before{
+      content: "";
+      background-color: #bbb;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      transform: rotate(10deg);
+    }
+    &__red{
+      color: #c20034;
+    }
+    &__yellow{
+      color: #fcc400;
+    }
+    &__green{
+      color: #04858a;
+    }
+    span{
+      font-family: "GothaProBold", sans-serif;
+    }
+  }
+}
