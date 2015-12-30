@@ -89,7 +89,7 @@ input{
 }
 button, input[type="reset"], input[type="button"], input[type="submit"] {
   box-shadow: none;
-  border-radius: 0px;
+  //border-radius: 0px;
 }
 a, input, textarea{
   &:focus{

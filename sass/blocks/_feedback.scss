@@ -1,0 +1,49 @@
+.feedback{
+  padding-bottom: 35px;
+  background: url('../images/feedback-bac-480.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  @media all and (min-width: 481px) {
+    background-image: url('../images/feedback-bac-1920.jpg');
+  }
+  h2{
+    color: #ffffff;
+    & + p{
+      margin: -27px 0px 14px 0px;
+      font-size: 18px;
+      line-height: 25px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  &_form{
+    width: 280px;
+    margin: 0 auto;
+  }
+  .button{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    padding: 0px 14px 6px 14px;
+  }
+  &_inner{
+    margin-bottom: 10px;
+    input{
+      padding: 0px 7px;
+      border: 1px solid #c9c7c7;
+      border-radius: 3px;
+      line-height: 36px;
+      width: 100%;
+      opacity: 0.5;
+    }
+    textarea{
+      padding: 0px 7px;
+      border: 1px solid #c9c7c7;
+      border-radius: 3px;
+      line-height: 36px;
+      width: 100%;
+      opacity: 0.5;
+    }
+  }
+
+}

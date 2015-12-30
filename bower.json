@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "jquery": "~2.1.4",
-    "susy": "~2.2.9"
+    "susy": "~2.2.9",
+    "bxslider-4": "fafnur-bxslider#~4.2.5"
   }
 }

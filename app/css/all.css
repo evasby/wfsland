@@ -2740,9 +2740,7 @@ input {
 
 button, input[type="reset"], input[type="button"], input[type="submit"] {
   -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 0px;
-  border-radius: 0px; }
+  box-shadow: none; }
 
 a:focus, input:focus, textarea:focus {
   outline: none; }
@@ -3115,7 +3113,7 @@ a:focus, input:focus, textarea:focus {
     line-height: 60px;
     margin-top: -25px;
     padding-right: 10px;
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: right;
     position: relative;
     z-index: 10;
@@ -3124,15 +3122,21 @@ a:focus, input:focus, textarea:focus {
     transform: rotate(0deg); }
     .tarifs_p:before {
       content: "";
+      background-color: #f5f5f5;
       position: absolute;
       right: 0px;
-      bottom: 0px;
-      width: 100%;
+      top: 0px;
+      width: 87%;
       height: 100%;
       z-index: -1;
-      -webkit-transform: rotate(10deg);
-      -ms-transform: rotate(10deg);
-      transform: rotate(10deg); }
+      -webkit-transform: rotate(6deg);
+      -ms-transform: rotate(6deg);
+      transform: rotate(6deg);
+      -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s; }
     .tarifs_p__red {
       color: #c20034; }
     .tarifs_p__yellow {
@@ -3170,3 +3174,164 @@ a:focus, input:focus, textarea:focus {
   .individual p {
     color: #fff;
     margin-bottom: 15px; }
+
+.howto_item {
+  width: 280px;
+  height: 257px;
+  margin: 0 auto 24px auto;
+  padding-top: 16px;
+  border: 10px solid #ececec;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  position: relative; }
+  .howto_item:before, .howto_item:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    margin-left: -40px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 40px 0 40px;
+    border-color: #ececec transparent transparent transparent; }
+  .howto_item:after {
+    border-top: 25px solid #fff;
+    bottom: -9px; }
+  .howto_row:last-child .howto_item:last-child {
+    border-color: #fcc400; }
+    .howto_row:last-child .howto_item:last-child:before, .howto_row:last-child .howto_item:last-child:after {
+      border: none; }
+  .howto_item:hover {
+    border-color: #f8c50f; }
+    .howto_item:hover:before, .howto_item:hover:after {
+      border-color: #f8c50f transparent transparent transparent; }
+
+.howto_descr {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 25px 25px 0px 25px;
+  background-color: #f8c50f;
+  z-index: 1;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: left; }
+  .howto_item:hover .howto_descr {
+    display: block; }
+
+.howto_name {
+  font-size: 18px;
+  line-height: 21px; }
+  .howto_name span {
+    font-size: 27px; }
+
+.clients {
+  background-color: #f5f5f5;
+  padding-bottom: 10px; }
+  .clients .bx-wrapper {
+    position: relative;
+    width: 181px;
+    margin: -20px auto 0px auto; }
+  .clients .bx-prev, .clients .bx-next {
+    position: absolute;
+    width: 15px;
+    height: 32px;
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: url("../images/clients-arrows.png") no-repeat;
+    top: 50%;
+    margin-top: -16px; }
+  .clients .bx-prev {
+    left: -58px; }
+  .clients .bx-next {
+    right: -58px;
+    background-position: -15px 0px; }
+
+.reviews_item {
+  width: 280px;
+  margin: 0 auto 28px auto; }
+
+.reviews_image {
+  width: 100%;
+  height: auto;
+  display: block; }
+
+.reviews_h3 {
+  font-size: 18px;
+  line-height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #013b49; }
+
+.reviews_quote {
+  text-align: left;
+  padding: 12px 0px 0px 11px; }
+
+.reviews_body {
+  padding: 10px 0px 9px 0px;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 11px; }
+
+.reviews_link {
+  color: #24a7c4; }
+  .reviews_link:link {
+    color: #24a7c4; }
+  .reviews_link:visited {
+    color: #24a7c4; }
+  .reviews_link:hover {
+    color: #24a7c4; }
+  .reviews_link:active {
+    color: #24a7c4; }
+
+.feedback {
+  padding-bottom: 35px;
+  background: url("../images/feedback-bac-480.jpg") 50% 50% no-repeat;
+  background-size: cover; }
+  @media all and (min-width: 481px) {
+    .feedback {
+      background-image: url("../images/feedback-bac-1920.jpg"); } }
+  .feedback h2 {
+    color: #ffffff; }
+    .feedback h2 + p {
+      margin: -27px 0px 14px 0px;
+      font-size: 18px;
+      line-height: 25px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase; }
+  .feedback_form {
+    width: 280px;
+    margin: 0 auto; }
+  .feedback .button {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    padding: 0px 14px 6px 14px; }
+  .feedback_inner {
+    margin-bottom: 10px; }
+    .feedback_inner input {
+      padding: 0px 7px;
+      border: 1px solid #c9c7c7;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      line-height: 36px;
+      width: 100%;
+      opacity: 0.5; }
+    .feedback_inner textarea {
+      padding: 0px 7px;
+      border: 1px solid #c9c7c7;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      line-height: 36px;
+      width: 100%;
+      opacity: 0.5; }
+
+.footer {
+  height: 410px; }
