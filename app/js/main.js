@@ -12,6 +12,17 @@ $(document).ready(function(){
   $(window).resize(function() {
     heightDetect();
   });
+  $('.slider_list').bxSlider({
+    //slideWidth: 181,
+    mode: 'fade',
+    minSlides: 1,
+    maxSlides: 1,
+    moveSlides: 1,
+    pager: true,
+    controls: false
+    //auto: true,
+    //pause: 5000,
+  });
   $('.clients_list').bxSlider({
     slideWidth: 181,
     minSlides: 1,

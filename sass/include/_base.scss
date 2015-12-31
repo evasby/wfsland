@@ -27,7 +27,7 @@ body{
 }
 .inner{
   @include container(320px);
-  @media all and (min-width: 481px) {
+  @include wide {
     @include container(960px);
   }
   text-align: center;
@@ -39,6 +39,12 @@ h1{
   color: #fff;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
+  z-index: 10;
+  @include wide {
+    font-size: 72px;
+    line-height: 60px;
+  }
   & + p{
     margin-bottom: 28px;
     font-size: 13px;
@@ -46,6 +52,13 @@ h1{
     color: #fff;
     text-align: center;
     text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+    @include wide {
+      margin-bottom: 32px;
+      font-size: 36px;
+      line-height: 66px;
+    }
   }
 }
 h2{
@@ -67,7 +80,7 @@ b, strong{
 .test{
   //background-color: #fff;
   //@include span(12);
-  @media all and (min-width: 481px) {
+  @include wide {
     @include span(4);
     &:last-child{
       @include span(4 last);

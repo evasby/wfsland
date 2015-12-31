@@ -5,7 +5,8 @@
   span{
     font-family: "robotoBold", sans-serif;
   }
-  /*@media all and (min-width: 481px) {
+  @include wide {
+    font-size: 19px;
     text-align: right;
-  }*/
+  }
 }

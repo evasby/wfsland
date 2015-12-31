@@ -9,34 +9,39 @@
   );
   @include layout($susy2);
   position: relative;
-  background: url('../images/header-bac-480-1.jpg') 50% 50% no-repeat;
-  background-size: cover;
   padding: 42px 0px 0px 0px;
   min-height: 350px;
-  @media all and (min-width: 481px) {
-    background: url('../images/header-bac-1920-1.jpg') 50% 50% no-repeat;
-    background-size: cover;
+  @include wide {
+    padding: 0px;
   }
   &_top{
     @include clearfix;
+    position: relative;
+    z-index: 10;
+    @include wide {
+      border-bottom: 1px solid #6d6e6d;
+      padding-bottom: 5px;
+    }
   }
   &_logo{
     display: none;
-    /*@media all and (min-width: 481px) {
-     @include span(4);
-     display: block;
-    }*/
+    padding-top: 12px;
+    text-align: left;
+    @include wide {
+      @include span(4);
+      display: block;
+    }
   }
   &_address{
-    //@include span(5);
-    /*@media all and (min-width: 481px) {
+    @include wide {
+      padding-top: 29px;
       @include span(5);
-    }*/
+    }
   }
   &_phone{
-    //@include span(3);
-    /*@media all and (min-width: 481px) {
-     @include span(3);
-    }*/
+    @include wide {
+      padding-top: 29px;
+      @include span(3);
+    }
   }
 }

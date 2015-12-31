@@ -3,4 +3,8 @@
   text-align: center;
   font-size: 10px;
   color: #fff;
+  @include wide {
+    font-size: 19px;
+    margin: 0px;
+  }
 }

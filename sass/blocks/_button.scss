@@ -1,4 +1,6 @@
 .button{
+  position: relative;
+  z-index: 10;
   display: inline-block;
   padding: 0px 27px 6px 27px;
   border: none;
@@ -13,17 +15,17 @@
   background-image: url('../images/button-mobile-bac.jpg'); 
   background-repeat: repeat-x;
   background-size: auto 100%;
-  /*@media all and (min-width: 481px) {
+  @include wide {
     padding: 0px 55px 6px 55px;
     font-size: 30px;
     line-height: 71px;
     background-image: url('../images/button-bac.jpg');
-  }*/
+  }
   &:hover{
     background-image: url('../images/button-mobile-bac-h.jpg');
     cursor: pointer;
-    /*@media all and (min-width: 481px) {
+    @include wide {
       background-image: url('../images/button-bac-h.jpg');
-    }*/
+    }
   }
 }

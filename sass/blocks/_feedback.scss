@@ -2,7 +2,7 @@
   padding-bottom: 35px;
   background: url('../images/feedback-bac-480.jpg') 50% 50% no-repeat;
   background-size: cover;
-  @media all and (min-width: 481px) {
+  @include wide {
     background-image: url('../images/feedback-bac-1920.jpg');
   }
   h2{
