@@ -1,13 +1,4 @@
 .header{
-  $susy2: (
-    columns: 12,
-    gutters: 0,
-    math: fluid,
-    output: float,
-    gutter-position: inside,
-    flow: rtl,
-  );
-  @include layout($susy2);
   position: relative;
   padding: 42px 0px 0px 0px;
   min-height: 350px;
@@ -28,20 +19,20 @@
     padding-top: 12px;
     text-align: left;
     @include wide {
-      @include span(4);
+      @include span(4 of rtl);
       display: block;
     }
   }
   &_address{
     @include wide {
       padding-top: 29px;
-      @include span(5);
+      @include span(5 of rtl);
     }
   }
   &_phone{
     @include wide {
       padding-top: 29px;
-      @include span(3);
+      @include span(3 of rtl);
     }
   }
 }

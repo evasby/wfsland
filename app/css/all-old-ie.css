@@ -2938,7 +2938,7 @@ a:focus, input:focus, textarea:focus {
   .about_p {
     font-size: 18px;
     line-height: 21px;
-    width: 200px;
+    max-width: 200px;
     margin: 7px auto 19px auto; }
 
 .portfolio {
@@ -2949,29 +2949,47 @@ a:focus, input:focus, textarea:focus {
   .portfolio h2 {
     color: #ffffff; }
   .portfolio_inner {
-    margin-bottom: 28px; }
+    *zoom: 1;
+    margin: 0px 0px 28px 0px; }
+    .portfolio_inner:before, .portfolio_inner:after {
+      content: ".";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .portfolio_inner:after {
+      clear: both; }
   .portfolio_item {
     display: block;
     width: 300px;
-    margin: 0 auto;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000; }
+    height: 300px;
+    overflow: hidden;
+    margin: -1px auto 0px auto;
+    position: relative; }
+    .portfolio_item:before {
+      content: "";
+      position: absolute;
+      z-index: 20;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      border: 1px solid #000; }
     .portfolio_item img {
       display: block;
       width: 100%;
       height: auto; }
-    .portfolio_item:first-child {
-      border-top: 1px solid #000; }
-      .portfolio_item:first-child:hover {
-        border-top: 1px solid #fcc400; }
-    .portfolio_item:hover {
-      border-left: 1px solid #fcc400;
-      border-right: 1px solid #fcc400;
-      border-bottom: 1px solid #fcc400;
-      outline: 9px solid #fcc400; }
-      .portfolio_item:hover img {
-        opacity: 0.5; }
+    .portfolio_item:hover:before {
+      border: 10px solid #fcc400;
+      border-bottom-width: 9px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; }
+    .portfolio_item:hover img {
+      opacity: 0.5; }
+    .portfolio_item:hover + .portfolio_item:before {
+      border-top-color: #fcc400; }
+    .portfolio_item__horizlong img {
+      height: 100%;
+      width: auto; }
 
 .certificates {
   padding-bottom: 10px; }

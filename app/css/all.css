@@ -2717,6 +2717,10 @@ h2 {
   font-size: 18px;
   text-transform: uppercase;
   padding: 26px 0px 28px 0px; }
+  @media all and (min-width: 800px) {
+    h2 {
+      font-size: 48px;
+      padding: 76px 0px 56px 0px; } }
   h2 b, h2 strong {
     font-family: "robotoBold", sans-serif; }
 
@@ -3065,43 +3069,118 @@ a:focus, input:focus, textarea:focus {
 
 .about {
   padding-bottom: 10px; }
+  @media all and (min-width: 800px) {
+    .about {
+      padding-bottom: 15px; } }
   .about_p {
     font-size: 18px;
     line-height: 21px;
-    width: 200px;
+    max-width: 200px;
     margin: 7px auto 19px auto; }
+  @media all and (min-width: 800px) {
+    .about_item {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 20%;
+      float: left; } }
 
 .portfolio {
   padding-bottom: 35px;
   background-color: #131418;
   background: -webkit-radial-gradient(center ellipse, #3d414f 0%, #131418 100%);
   background: radial-gradient(ellipse at center, #3d414f 0%, #131418 100%); }
+  @media all and (min-width: 800px) {
+    .portfolio {
+      padding-bottom: 70px; } }
   .portfolio h2 {
     color: #ffffff; }
   .portfolio_inner {
-    margin-bottom: 28px; }
+    margin: 0px 0px 28px 0px; }
+    .portfolio_inner:before, .portfolio_inner:after {
+      content: ".";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .portfolio_inner:after {
+      clear: both; }
+    @media all and (min-width: 800px) {
+      .portfolio_inner {
+        border: 1px solid #000;
+        margin: 0px 0px 70px 0px; } }
   .portfolio_item {
     display: block;
     width: 300px;
-    margin: 0 auto;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000; }
+    height: 300px;
+    overflow: hidden;
+    margin: -1px auto 0px auto;
+    position: relative; }
+    .portfolio_item:before {
+      content: "";
+      position: absolute;
+      z-index: 20;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      border: 1px solid #000; }
     .portfolio_item img {
       display: block;
       width: 100%;
       height: auto; }
-    .portfolio_item:first-child {
-      border-top: 1px solid #000; }
-      .portfolio_item:first-child:hover {
-        border-top: 1px solid #fcc400; }
-    .portfolio_item:hover {
-      border-left: 1px solid #fcc400;
-      border-right: 1px solid #fcc400;
-      border-bottom: 1px solid #fcc400;
-      outline: 9px solid #fcc400; }
-      .portfolio_item:hover img {
-        opacity: 0.5; }
+    .portfolio_item:hover:before {
+      border: 10px solid #fcc400;
+      border-bottom-width: 9px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; }
+    .portfolio_item:hover img {
+      opacity: 0.5; }
+    .portfolio_item:hover + .portfolio_item:before {
+      border-top-color: #fcc400; }
+    .portfolio_item__horizlong img {
+      height: 100%;
+      width: auto; }
+    @media all and (min-width: 800px) {
+      .portfolio_item {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 33.33333%;
+        float: right;
+        height: auto;
+        margin: 0px;
+        border: none;
+        position: relative;
+        z-index: 5;
+        overflow: visible; }
+        .portfolio_item:first-child {
+          border: none; }
+          .portfolio_item:first-child:hover {
+            border-color: #fcc400; }
+        .portfolio_item:hover {
+          border-color: #fcc400;
+          outline: none;
+          z-index: 10; }
+          .portfolio_item:hover:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+            border: 10px solid #fcc400;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            background: url("../images/portfolio-view.png") 50% 50% no-repeat; }
+          .portfolio_item:hover img {
+            opacity: 0.5; }
+          .portfolio_item:hover + .portfolio_item:before {
+            border-top-color: #000; }
+        .portfolio_item__leftlong {
+          float: left; }
+        .portfolio_item__horizlong {
+          width: 66.6667%; }
+          .portfolio_item__horizlong img {
+            height: auto;
+            width: 100%; } }
 
 .certificates {
   padding-bottom: 10px; }

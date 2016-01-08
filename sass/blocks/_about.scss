@@ -1,9 +1,17 @@
 .about{
 	padding-bottom: 10px;
+	@include wide{
+		padding-bottom: 15px;
+	}
 	&_p{
 		font-size: 18px;
 		line-height: 21px;
-		width: 200px;
+		max-width: 200px;
 		margin: 7px auto 19px auto;
+	}
+	&_item{
+		@include wide{
+			@include span(2.4);
+		}
 	}
 }

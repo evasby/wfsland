@@ -15,6 +15,7 @@ $susy: (
     toggle: top right,
   )*/
 );
+@include layout($susy);
 //gutters - пробелы между колонками составляют 1/4 от расстояния целой колонки
 body{
   font-family: "roboto", sans-serif;
@@ -67,6 +68,10 @@ h2{
   font-size: 18px;
   text-transform: uppercase;
   padding: 26px 0px 28px 0px;
+  @include wide {
+    font-size: 48px;
+    padding: 76px 0px 56px 0px;
+  }
   b, strong{
     font-family: "robotoBold", sans-serif;
   }

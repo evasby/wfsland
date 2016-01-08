@@ -2,37 +2,111 @@
 	padding-bottom: 35px;
 	background-color: #131418;
 	background: radial-gradient(ellipse at center, rgba(61,65,79,1) 0%, rgba(19,20,24,1) 100%);
+	@include wide{
+		padding-bottom: 70px;
+	}
 	h2{
 		color: #ffffff;
 	}
 	&_inner{
-		margin-bottom: 28px;
+		@include clearfix;
+		margin: 0px 0px 28px 0px;
+		@include wide{
+			border: 1px solid #000;
+			margin: 0px 0px 70px 0px;
+		}
 	}
 	&_item{
 		display: block;
 		width: 300px;
-		margin: 0 auto;
-		border-left: 1px solid #000;
-		border-right: 1px solid #000;
-		border-bottom: 1px solid #000;
+		height: 300px;
+		overflow: hidden;
+		margin: -1px auto 0px auto;
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			z-index: 20;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			border: 1px solid #000;
+		}
 		img{
 			display: block;	
 			width: 100%;
 			height: auto;
 		}
-		&:first-child{
-			border-top: 1px solid #000;
-			&:hover{
-				border-top: 1px solid #fcc400;
-			}
-		}
 		&:hover{
-			border-left: 1px solid #fcc400;
-			border-right: 1px solid #fcc400;
-			border-bottom: 1px solid #fcc400;
-			outline: 9px solid #fcc400;
+			&:before{
+				border: 10px solid #fcc400;
+				border-bottom-width: 9px;
+				border-radius: 3px;
+			}
 			img{
 				opacity: 0.5;
+			}
+			& + .portfolio_item{
+				&:before{
+					border-top-color: #fcc400;
+				}
+			}
+		}
+		&__horizlong{
+			img{
+				height: 100%;
+				width: auto;
+			}
+		}
+		@include wide{
+			@include span(4 of rtl);
+			height: auto;
+			margin: 0px;
+			border: none;
+			position: relative;
+			z-index: 5;
+			overflow: visible;
+			&:first-child{
+				border: none;
+				&:hover{
+					border-color: #fcc400;
+				}
+			}
+			&:hover{
+				border-color: #fcc400;
+				outline: none;
+				z-index: 10;
+				&:before{
+					content: "";
+					position: absolute;
+					top: -10px;
+					right: -10px;
+					bottom: -10px;
+					left: -10px;
+					border: 10px solid #fcc400;
+					border-radius: 3px;
+					background: url('../images/portfolio-view.png') 50% 50% no-repeat;
+				}
+				img{
+					opacity: 0.5;
+				}
+				& + .portfolio_item{
+					&:before{
+						border-top-color: #000;
+					}
+				}
+			}
+			&__leftlong{
+				float: left;
+			}
+			&__horizlong{
+				//@include span(8 of rtl);
+				width: 66.6667%;
+				img{
+					height: auto;
+					width: 100%;
+				}
 			}
 		}
 	}
