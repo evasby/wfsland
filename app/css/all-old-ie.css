@@ -2987,7 +2987,7 @@ a:focus, input:focus, textarea:focus {
       opacity: 0.5; }
     .portfolio_item:hover + .portfolio_item:before {
       border-top-color: #fcc400; }
-    .portfolio_item__horizlong img {
+    .portfolio_item:nth-child(6n) img {
       height: 100%;
       width: auto; }
 

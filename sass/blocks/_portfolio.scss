@@ -53,7 +53,7 @@
 				}
 			}
 		}
-		&__horizlong{
+		&:nth-child(6n){
 			img{
 				height: 100%;
 				width: auto;
@@ -97,15 +97,18 @@
 					}
 				}
 			}
-			&__leftlong{
+			&:nth-child(6n-1){
 				float: left;
 			}
-			&__horizlong{
+			&:nth-child(6n){
 				//@include span(8 of rtl);
 				width: 66.6667%;
 				img{
 					height: auto;
 					width: 100%;
+				}
+				+ .portfolio_item{
+					clear: both;
 				}
 			}
 		}
