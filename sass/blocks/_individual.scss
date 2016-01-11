@@ -5,14 +5,29 @@
 	border-radius: 8px;
 	//box-shadow: inset 0px 0px 2px 8px rgba(200,200,200,0.1);
 	box-shadow: inset 0px 0px 5px 5px rgba(27,28,35,0.4);
+	@include wide{
+		width: auto;
+		padding: 50px 0px 50px 0px;
+	}
 	h3{
 		font-family: "robotoBold", sans-serif;
 		font-size: 18px;
 		line-height: 20px;
 		color: #fff;
+		@include wide{
+			font-family: "roboto", sans-serif;
+			display: inline-block;
+			font-size: 36px;
+			padding-bottom: 35px;
+		}
 	}
 	p{
 		color: #fff;
 		margin-bottom: 15px;
+		@include wide{
+			font-family: "robotoBold", sans-serif;
+			display: inline-block;
+			font-size: 36px;
+		}
 	}
 }

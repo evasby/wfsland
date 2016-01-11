@@ -4,19 +4,37 @@
     line-height: 21px;
     color: #1b1b1b;
     margin-bottom: 16px;
+    @include wide{
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 24px;
+    }
   }
   &_item{
     width: 280px;
     margin: 0 auto 20px auto;
-    padding: 23px 10px 29px 10px;
-    border: 10px solid #ececec;
-    border-radius: 3px;
+    form{
+      padding: 23px 10px 29px 10px;
+      border: 10px solid #ececec;
+      border-radius: 3px;
+      @include wide{
+        padding: 28px 33px 39px 33px;
+      }
+    }
+    @include wide{
+      @include span(6);
+      padding: 0px 10px;
+      margin-bottom: 70px;
+    }
   }
   .button{
     width: 100%;
     text-align: center;
     font-size: 15px;
     padding: 0px 14px 6px 14px;
+    @include wide{
+      font-size: 23px;
+    }
   }
   &_inner{
     margin-bottom: 10px;
@@ -26,6 +44,11 @@
       border-radius: 3px;
       line-height: 36px;
       width: 100%;
+      @include wide{
+        font-size: 18px;
+        line-height: 68px;
+        padding: 0px 20px;
+      }
     }
   }
 }

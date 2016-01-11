@@ -2995,13 +2995,32 @@ a:focus, input:focus, textarea:focus {
   padding-bottom: 10px; }
   .certificates_item {
     width: 263px;
-    margin: 0 auto 16px auto;
-    -webkit-box-shadow: 15px 15px 28px -5px rgba(0, 0, 0, 0.4);
-    box-shadow: 15px 15px 28px -5px rgba(0, 0, 0, 0.4); }
+    margin: 0 auto 16px auto; }
     .certificates_item img {
       display: block;
       width: 100%;
-      height: auto; }
+      height: auto;
+      -webkit-box-shadow: 15px 15px 28px -5px rgba(0, 0, 0, 0.4);
+      box-shadow: 15px 15px 28px -5px rgba(0, 0, 0, 0.4); }
+  .certificates_more {
+    font-size: 22px;
+    display: none; }
+    .certificates_more a {
+      display: inline-block;
+      padding: 4px 9px 9px 9px;
+      color: #ce0137;
+      text-decoration: none;
+      border: 1px dashed #ce0137;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; }
+      .certificates_more a:link {
+        color: #ce0137; }
+      .certificates_more a:visited {
+        color: #ce0137; }
+      .certificates_more a:hover {
+        color: #ce0137; }
+      .certificates_more a:active {
+        color: #ce0137; }
 
 .call {
   padding: 23px 0px 15px 0px;
@@ -3010,12 +3029,20 @@ a:focus, input:focus, textarea:focus {
   line-height: 16px; }
   .call_phone {
     font-family: "robotoBold", sans-serif;
-    font-size: 18px;
-    line-height: 44px;
+    font-size: 36px;
+    line-height: 66px;
     color: #ce0137; }
 
 .magazines {
-  padding-top: 30px; }
+  padding-top: 30px;
+  *zoom: 1; }
+  .magazines:before, .magazines:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .magazines:after {
+    clear: both; }
   .magazines_item {
     width: 280px;
     margin: 0 auto;
@@ -3053,11 +3080,12 @@ a:focus, input:focus, textarea:focus {
 
 .orders_item {
   width: 280px;
-  margin: 0 auto 20px auto;
-  padding: 23px 10px 29px 10px;
-  border: 10px solid #ececec;
-  -webkit-border-radius: 3px;
-  border-radius: 3px; }
+  margin: 0 auto 20px auto; }
+  .orders_item form {
+    padding: 23px 10px 29px 10px;
+    border: 10px solid #ececec;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
 
 .orders .button {
   width: 100%;
@@ -3080,6 +3108,15 @@ a:focus, input:focus, textarea:focus {
   padding-bottom: 30px; }
   .tarifs h2 {
     color: #ffffff; }
+  .tarifs_inner {
+    *zoom: 1; }
+    .tarifs_inner:before, .tarifs_inner:after {
+      content: ".";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .tarifs_inner:after {
+      clear: both; }
   .tarifs_item {
     width: 280px;
     margin: 0px auto 30px auto;
@@ -3193,6 +3230,35 @@ a:focus, input:focus, textarea:focus {
     text-align: left; }
     .tarifs_row:first-child {
       border: none; }
+  .tarifs_button {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    padding: 0px 27px 6px 27px;
+    border: none;
+    border-left: 1px solid #e90f51;
+    border-right: 1px solid #e90f51;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    font-size: 18px;
+    line-height: 47px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #bc0a39;
+    background-image: url("../images/button-mobile-bac.jpg");
+    background-repeat: repeat-x;
+    background-size: auto 100%; }
+    .tarifs_button:link {
+      color: #fff; }
+    .tarifs_button:visited {
+      color: #fff; }
+    .tarifs_button:hover {
+      color: #fff; }
+    .tarifs_button:active {
+      color: #fff; }
+    .tarifs_button:hover {
+      background-image: url("../images/button-mobile-bac-h.jpg");
+      cursor: pointer; }
 
 .individual {
   width: 280px;

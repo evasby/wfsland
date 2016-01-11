@@ -3,10 +3,18 @@
   background-color: #f5f5f5;
   font-size: 14px;
   line-height: 16px;
+  @include wide{
+    max-width: 960px;
+    padding: 53px 0px 45px 0px;
+    margin: 0 auto;
+    font-size: 36px;
+    line-height: 44px;
+    border-radius: 5px;
+  }
   &_phone{
     font-family: "robotoBold", sans-serif;
-    font-size: 18px;
-    line-height: 44px;
+    font-size: 36px;
+    line-height: 66px;
     color: #ce0137;
   }
 }
