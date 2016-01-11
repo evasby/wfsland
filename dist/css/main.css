@@ -2717,6 +2717,10 @@ h2 {
   font-size: 18px;
   text-transform: uppercase;
   padding: 26px 0px 28px 0px; }
+  @media all and (min-width: 800px) {
+    h2 {
+      font-size: 48px;
+      padding: 76px 0px 56px 0px; } }
   h2 b, h2 strong {
     font-family: "robotoBold", sans-serif; }
 
@@ -3065,73 +3069,211 @@ a:focus, input:focus, textarea:focus {
 
 .about {
   padding-bottom: 10px; }
+  @media all and (min-width: 800px) {
+    .about {
+      padding-bottom: 15px; } }
   .about_p {
     font-size: 18px;
     line-height: 21px;
-    width: 200px;
+    max-width: 200px;
     margin: 7px auto 19px auto; }
+  @media all and (min-width: 800px) {
+    .about_item {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 20%;
+      float: left; } }
 
 .portfolio {
   padding-bottom: 35px;
   background-color: #131418;
   background: -webkit-radial-gradient(center ellipse, #3d414f 0%, #131418 100%);
   background: radial-gradient(ellipse at center, #3d414f 0%, #131418 100%); }
+  @media all and (min-width: 800px) {
+    .portfolio {
+      padding-bottom: 70px; } }
   .portfolio h2 {
     color: #ffffff; }
   .portfolio_inner {
-    margin-bottom: 28px; }
+    margin: 0px 0px 28px 0px; }
+    .portfolio_inner:before, .portfolio_inner:after {
+      content: ".";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .portfolio_inner:after {
+      clear: both; }
+    @media all and (min-width: 800px) {
+      .portfolio_inner {
+        border: 1px solid #000;
+        margin: 0px 0px 70px 0px; } }
   .portfolio_item {
     display: block;
     width: 300px;
-    margin: 0 auto;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000; }
+    height: 300px;
+    overflow: hidden;
+    margin: -1px auto 0px auto;
+    position: relative; }
+    .portfolio_item:before {
+      content: "";
+      position: absolute;
+      z-index: 20;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      border: 1px solid #000; }
     .portfolio_item img {
       display: block;
       width: 100%;
       height: auto; }
-    .portfolio_item:first-child {
-      border-top: 1px solid #000; }
-      .portfolio_item:first-child:hover {
-        border-top: 1px solid #fcc400; }
-    .portfolio_item:hover {
-      border-left: 1px solid #fcc400;
-      border-right: 1px solid #fcc400;
-      border-bottom: 1px solid #fcc400;
-      outline: 9px solid #fcc400; }
-      .portfolio_item:hover img {
-        opacity: 0.5; }
+    .portfolio_item:hover:before {
+      border: 10px solid #fcc400;
+      border-bottom-width: 9px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; }
+    .portfolio_item:hover img {
+      opacity: 0.5; }
+    .portfolio_item:hover + .portfolio_item:before {
+      border-top-color: #fcc400; }
+    .portfolio_item:nth-child(6n) img {
+      height: 100%;
+      width: auto; }
+    @media all and (min-width: 800px) {
+      .portfolio_item {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 33.33333%;
+        float: right;
+        height: auto;
+        margin: 0px;
+        border: none;
+        position: relative;
+        z-index: 5;
+        overflow: visible; }
+        .portfolio_item:first-child {
+          border: none; }
+          .portfolio_item:first-child:hover {
+            border-color: #fcc400; }
+        .portfolio_item:hover {
+          border-color: #fcc400;
+          outline: none;
+          z-index: 10; }
+          .portfolio_item:hover:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+            border: 10px solid #fcc400;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            background: url("../images/portfolio-view.png") 50% 50% no-repeat; }
+          .portfolio_item:hover img {
+            opacity: 0.5; }
+          .portfolio_item:hover + .portfolio_item:before {
+            border-top-color: #000; }
+        .portfolio_item:nth-child(6n-1) {
+          float: left; }
+        .portfolio_item:nth-child(6n) {
+          width: 66.6667%; }
+          .portfolio_item:nth-child(6n) img {
+            height: auto;
+            width: 100%; }
+          .portfolio_item:nth-child(6n) + .portfolio_item {
+            clear: both; } }
 
 .certificates {
   padding-bottom: 10px; }
+  @media all and (min-width: 800px) {
+    .certificates {
+      padding-top: 17px;
+      padding-bottom: 60px; } }
   .certificates_item {
     width: 263px;
-    margin: 0 auto 16px auto;
-    -webkit-box-shadow: 15px 15px 28px -5px rgba(0, 0, 0, 0.4);
-    box-shadow: 15px 15px 28px -5px rgba(0, 0, 0, 0.4); }
+    margin: 0 auto 16px auto; }
+    @media all and (min-width: 800px) {
+      .certificates_item {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+        float: left;
+        margin: 0 auto 41px auto;
+        padding: 7px; } }
     .certificates_item img {
       display: block;
       width: 100%;
-      height: auto; }
+      height: auto;
+      -webkit-box-shadow: 15px 15px 28px -5px rgba(0, 0, 0, 0.4);
+      box-shadow: 15px 15px 28px -5px rgba(0, 0, 0, 0.4); }
+  .certificates_more {
+    font-size: 22px;
+    display: none; }
+    @media all and (min-width: 800px) {
+      .certificates_more {
+        display: block; } }
+    .certificates_more a {
+      display: inline-block;
+      padding: 4px 9px 9px 9px;
+      color: #ce0137;
+      text-decoration: none;
+      border: 1px dashed #ce0137;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; }
+      .certificates_more a:link {
+        color: #ce0137; }
+      .certificates_more a:visited {
+        color: #ce0137; }
+      .certificates_more a:hover {
+        color: #ce0137; }
+      .certificates_more a:active {
+        color: #ce0137; }
 
 .call {
   padding: 23px 0px 15px 0px;
   background-color: #f5f5f5;
   font-size: 14px;
   line-height: 16px; }
+  @media all and (min-width: 800px) {
+    .call {
+      max-width: 960px;
+      padding: 53px 0px 45px 0px;
+      margin: 0 auto;
+      font-size: 36px;
+      line-height: 44px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px; } }
   .call_phone {
     font-family: "robotoBold", sans-serif;
-    font-size: 18px;
-    line-height: 44px;
+    font-size: 36px;
+    line-height: 66px;
     color: #ce0137; }
 
 .magazines {
   padding-top: 30px; }
+  .magazines:before, .magazines:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .magazines:after {
+    clear: both; }
+  @media all and (min-width: 800px) {
+    .magazines {
+      padding-bottom: 35px; } }
   .magazines_item {
     width: 280px;
     margin: 0 auto;
     padding-bottom: 38px; }
+    @media all and (min-width: 800px) {
+      .magazines_item {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+        float: left;
+        padding-left: 55px;
+        padding-right: 55px; } }
     .magazines_item img {
       width: 100%;
       height: auto; }
@@ -3140,6 +3282,12 @@ a:focus, input:focus, textarea:focus {
     line-height: 17px;
     color: #1b1b1b;
     margin-bottom: 23px; }
+    @media all and (min-width: 800px) {
+      .magazines_descr {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 0px 35px;
+        margin-bottom: 13px; } }
   .magazines_link {
     font-size: 18px;
     padding: 1px 8px 5px 8px;
@@ -3162,20 +3310,40 @@ a:focus, input:focus, textarea:focus {
   line-height: 21px;
   color: #1b1b1b;
   margin-bottom: 16px; }
+  @media all and (min-width: 800px) {
+    .orders_title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 24px; } }
 
 .orders_item {
   width: 280px;
-  margin: 0 auto 20px auto;
-  padding: 23px 10px 29px 10px;
-  border: 10px solid #ececec;
-  -webkit-border-radius: 3px;
-  border-radius: 3px; }
+  margin: 0 auto 20px auto; }
+  .orders_item form {
+    padding: 23px 10px 29px 10px;
+    border: 10px solid #ececec;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+    @media all and (min-width: 800px) {
+      .orders_item form {
+        padding: 28px 33px 39px 33px; } }
+  @media all and (min-width: 800px) {
+    .orders_item {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+      padding: 0px 10px;
+      margin-bottom: 70px; } }
 
 .orders .button {
   width: 100%;
   text-align: center;
   font-size: 15px;
   padding: 0px 14px 6px 14px; }
+  @media all and (min-width: 800px) {
+    .orders .button {
+      font-size: 23px; } }
 
 .orders_inner {
   margin-bottom: 10px; }
@@ -3186,12 +3354,24 @@ a:focus, input:focus, textarea:focus {
     border-radius: 3px;
     line-height: 36px;
     width: 100%; }
+    @media all and (min-width: 800px) {
+      .orders_inner input {
+        font-size: 18px;
+        line-height: 68px;
+        padding: 0px 20px; } }
 
 .tarifs {
   background-color: #131418;
   padding-bottom: 30px; }
   .tarifs h2 {
     color: #ffffff; }
+  .tarifs_inner:before, .tarifs_inner:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .tarifs_inner:after {
+    clear: both; }
   .tarifs_item {
     width: 280px;
     margin: 0px auto 30px auto;
@@ -3200,6 +3380,12 @@ a:focus, input:focus, textarea:focus {
     border-radius: 3px;
     background-color: #fff;
     overflow: hidden; }
+    @media all and (min-width: 800px) {
+      .tarifs_item {
+        width: 32.24638%;
+        float: left;
+        margin-left: 0.54348%;
+        margin-right: 0.54348%; } }
   .tarifs_h3 {
     font-family: "robotoBold", sans-serif;
     font-size: 16px;
@@ -3296,6 +3482,9 @@ a:focus, input:focus, textarea:focus {
   .tarifs_list {
     padding: 0px 15px;
     margin-bottom: 12px; }
+    @media all and (min-width: 800px) {
+      .tarifs_list {
+        padding: 0px 11px; } }
   .tarifs_row {
     color: #131418;
     font-size: 16px;
@@ -3305,6 +3494,49 @@ a:focus, input:focus, textarea:focus {
     text-align: left; }
     .tarifs_row:first-child {
       border: none; }
+    @media all and (min-width: 800px) {
+      .tarifs_row {
+        padding: 11px 20px 14px 20px; } }
+  .tarifs_button {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    padding: 0px 27px 6px 27px;
+    border: none;
+    border-left: 1px solid #e90f51;
+    border-right: 1px solid #e90f51;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    font-size: 18px;
+    line-height: 47px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #bc0a39;
+    background-image: url("../images/button-mobile-bac.jpg");
+    background-repeat: repeat-x;
+    background-size: auto 100%; }
+    .tarifs_button:link {
+      color: #fff; }
+    .tarifs_button:visited {
+      color: #fff; }
+    .tarifs_button:hover {
+      color: #fff; }
+    .tarifs_button:active {
+      color: #fff; }
+    @media all and (min-width: 800px) {
+      .tarifs_button {
+        margin: 0px 20px;
+        display: block;
+        padding: 0px 0px 6px 0px;
+        font-size: 24px;
+        line-height: 58px;
+        background-image: url("../images/button-bac.jpg"); } }
+    .tarifs_button:hover {
+      background-image: url("../images/button-mobile-bac-h.jpg");
+      cursor: pointer; }
+      @media all and (min-width: 800px) {
+        .tarifs_button:hover {
+          background-image: url("../images/button-bac-h.jpg"); } }
 
 .individual {
   width: 280px;
@@ -3314,14 +3546,29 @@ a:focus, input:focus, textarea:focus {
   border-radius: 8px;
   -webkit-box-shadow: inset 0px 0px 5px 5px rgba(27, 28, 35, 0.4);
   box-shadow: inset 0px 0px 5px 5px rgba(27, 28, 35, 0.4); }
+  @media all and (min-width: 800px) {
+    .individual {
+      width: auto;
+      padding: 50px 0px 50px 0px; } }
   .individual h3 {
     font-family: "robotoBold", sans-serif;
     font-size: 18px;
     line-height: 20px;
     color: #fff; }
+    @media all and (min-width: 800px) {
+      .individual h3 {
+        font-family: "roboto", sans-serif;
+        display: inline-block;
+        font-size: 36px;
+        padding-bottom: 35px; } }
   .individual p {
     color: #fff;
     margin-bottom: 15px; }
+    @media all and (min-width: 800px) {
+      .individual p {
+        font-family: "robotoBold", sans-serif;
+        display: inline-block;
+        font-size: 36px; } }
 
 .howto_item {
   width: 280px;
