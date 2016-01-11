@@ -5,9 +5,9 @@
 }
 //*********************************************************************************/
 @mixin wide {
-  @if not $old-ie {
-    @media all and (min-width: 800px) { @content; }
-  }
+  // @if not $old-ie {
+    @media screen and (min-width: 800px) { @content; }
+  // }
 }
 //*********************************************************************************/
 @mixin placeholder($color){
