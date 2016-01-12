@@ -30,7 +30,7 @@ $(document).ready(function(){
     moveSlides: 1,
     pager: false,
     auto: true,
-    slideMargin: 45,
+    slideMargin: 38,
     pause: 5000,
     autoHover: true,
     easing: 'linear'

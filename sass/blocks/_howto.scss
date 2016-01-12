@@ -1,5 +1,9 @@
 .howto{
+  @include wide{
+    padding-bottom: 50px;
+  }
   &_row{
+    @include clearfix;
   }
   &_item{
     width: 280px;
@@ -36,6 +40,99 @@
       &:before, &:after{
         border-color: #f8c50f transparent transparent transparent;
       }
+    }
+    @include wide{
+      margin: 4px auto 20px auto;
+      .howto_row:nth-child(even) &{
+        @include span(4 (gutters: 0.7, gutter-position: split));
+        &:before, &:after{
+          right: -25px;
+          bottom: 50%;
+          left: auto;
+          margin: 0px 0px -33px 0px;
+          border-width: 33px 0 33px 25px;
+          border-color: transparent transparent transparent #ececec;
+        }
+        &:after{
+          border-left: 33px solid #fff;
+          bottom: auto;
+          right: -10px;
+          bottom: 50%;
+          left: auto;
+        }
+        &:last-child{
+          &:before, &:after{
+            right: auto;
+            bottom: -25px;
+            left: 50%;
+            margin: 0px 0px 0px -40px;
+            border-width: 25px 40px 0 40px;
+            border-color: #ececec transparent transparent transparent;
+          }
+          &:after{
+            border-top: 25px solid #fff;
+            bottom: -9px;
+          }
+          &:hover{
+            border-color: #f8c50f;
+            &:before, &:after{
+              border-color: #f8c50f transparent transparent transparent;
+            }
+          }
+        }
+        &:hover{
+          border-color: #f8c50f;
+          &:before, &:after{
+            border-color: transparent transparent transparent #f8c50f;
+          }
+        }
+      }
+
+      .howto_row:nth-child(odd) &{
+        @include span(4 rtl (gutters: 0.7, gutter-position: split));
+        &:before, &:after{
+          right: auto;
+          bottom: 50%;
+          left: -25px;
+          margin: 0px 0px -33px 0px;
+          border-width: 33px 25px 33px 0px;
+          border-color: transparent #ececec transparent transparent;
+        }
+        &:after{
+          border-right: 33px solid #fff;
+          bottom: auto;
+          left: -10px;
+          bottom: 50%;
+          right: auto;
+        }
+        &:last-child{
+          &:before, &:after{
+            right: auto;
+            bottom: -25px;
+            left: 50%;
+            margin: 0px 0px 0px -40px;
+            border-width: 25px 40px 0 40px;
+            border-color: #ececec transparent transparent transparent;
+          }
+          &:after{
+            border-top: 25px solid #fff;
+            bottom: -9px;
+          }
+          &:hover{
+            border-color: #f8c50f;
+            &:before, &:after{
+              border-color: #f8c50f transparent transparent transparent;
+            }
+          }
+        }
+        &:hover{
+          border-color: #f8c50f;
+          &:before, &:after{
+            border-color: transparent #f8c50f transparent transparent;
+          }
+        }
+      }
+
     }
   }
   &_descr{

@@ -1,7 +1,20 @@
 .reviews{
+  @include wide{
+    background-color: #eaf0f3;
+  }
+  &_inner{
+    @include wide{
+      padding-top: 4px;
+    }
+  }
   &_item{
     width: 280px;
     margin: 0 auto 28px auto;
+    @include wide{
+      @include span(4 (gutters: 0.12, gutter-position: split));
+      background-color: #fff;
+      padding-bottom: 19px;
+    }
   }
   &_image{
     width: 100%;
@@ -18,12 +31,17 @@
   &_quote{
     text-align: left;
     padding: 12px 0px 0px 11px;
+    @include wide{
+      padding: 12px 22px 0px 22px;
+    }
   }
   &_body{
-    padding: 10px 0px 9px 0px;
-    font-size: 14px;
+    padding: 10px 0px 9px 11px;
+    font-size: 16px;
     text-align: left;
-    padding-left: 11px;
+    @include wide{
+      padding: 12px 22px 12px 22px;
+    }
   }
   &_link{
     @include link(#24a7c4, #24a7c4);
