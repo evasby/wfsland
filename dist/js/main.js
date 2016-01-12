@@ -30,7 +30,7 @@ $(document).ready(function(){
     moveSlides: 1,
     pager: false,
     auto: true,
-    slideMargin: 45,
+    slideMargin: 38,
     pause: 5000,
     autoHover: true,
     easing: 'linear'
@@ -38,6 +38,7 @@ $(document).ready(function(){
   /************************************************************************/
   var map;
   var myLatlng = new google.maps.LatLng(53.907179, 27.484561);
+  var myCenter = new google.maps.LatLng(53.911500, 27.484561);
   function initialize() {
     var styles = [
       /*{
@@ -65,7 +66,7 @@ $(document).ready(function(){
     var mapOptions = {
       zoom: 15,
       //center: new google.maps.LatLng(53.905497, 27.558681)
-      center: myLatlng,
+      center: myCenter,
       mapTypeControlOptions: {
         mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
       }
@@ -74,10 +75,11 @@ $(document).ready(function(){
         mapOptions);
     var marker = new google.maps.Marker({
         position: myLatlng,
-        title:"Webformat"
+        title:"Webformat",
+        icon: '../images/footer-marker.png'
     });
     marker.setMap(map);
-    var contentString = '<div class="main9_wrap"><img src="http://landing.wfs.by/sites/all/themes/landing/image/webformat.png" alt="" /><div class="main9_text">+375 44 732 05 09<br>г.Минск Притыцкого 29 оф 522</div></div>';
+    var contentString = '<div class="footer_wrap"><div class="footer_phone">+375 (44) <span>732 05 09</span></div><div class="footer_address"><b>г.Минск</b><br>ул. Притыцкого 29 оф 522</div><img src="../images/footer-wfs.png" alt="" /></div>';
     var infowindow = new google.maps.InfoWindow({
         content: contentString
     });
