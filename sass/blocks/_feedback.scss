@@ -4,6 +4,7 @@
   background-size: cover;
   @include wide {
     background-image: url('../images/feedback-bac-1920.jpg');
+    padding-bottom: 70px;
   }
   h2{
     color: #ffffff;
@@ -14,20 +15,44 @@
       color: #fff;
       text-align: center;
       text-transform: uppercase;
+      @include wide {
+        margin: -27px 0px 45px 0px;
+        font-size: 48px;
+        line-height: 35px;
+      }
     }
   }
   &_form{
     width: 280px;
     margin: 0 auto;
+    @include wide{
+      width: auto;
+    }
   }
   .button{
     width: 100%;
     text-align: center;
     font-size: 15px;
     padding: 0px 14px 6px 14px;
+    @include wide {
+      font-size: 24px;
+      padding: 0px 95px 6px 95px;
+      width: auto;
+      margin-top: 25px;
+    }
   }
   &_inner{
     margin-bottom: 10px;
+    @include wide{
+      @include span(4);
+      margin: 0px;
+      padding: 5px;
+    }
+    &__textarea{
+      @include wide{
+        @include span(12);
+      }
+    }
     input{
       padding: 0px 7px;
       border: 1px solid #c9c7c7;
@@ -35,6 +60,13 @@
       line-height: 36px;
       width: 100%;
       opacity: 0.5;
+      @include wide {
+        font-size: 18px;
+        line-height: 62px;
+        padding: 0px 18px;
+        opacity: 0.7;
+        @include placeholder(#191919);
+      }
     }
     textarea{
       padding: 0px 7px;
@@ -43,6 +75,13 @@
       line-height: 36px;
       width: 100%;
       opacity: 0.5;
+      @include wide {
+        height: 145px;
+        font-size: 18px;
+        padding: 18px;
+        opacity: 0.7;
+        @include placeholder(#191919);
+      }
     }
   }
 

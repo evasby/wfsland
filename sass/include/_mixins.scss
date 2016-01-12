@@ -10,24 +10,30 @@
   // }
 }
 //*********************************************************************************/
-@mixin placeholder($color){
-  ::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+@mixin placeholder($color, $opacity:1){
+  &::-webkit-input-placeholder { /* Safari, Chrome and Opera */
     color: $color;
+    opacity: $opacity;
   }
-  :-moz-placeholder { /* Firefox 18- */
+  &:-moz-placeholder { /* Firefox 18- */
     color: $color;
+    opacity: $opacity;
   }
-  ::-moz-placeholder { /* Firefox 19+ */
+  &::-moz-placeholder { /* Firefox 19+ */
     color: $color;
+    opacity: $opacity;
   }
-  :-ms-input-placeholder { /* IE 10+ */
+  &:-ms-input-placeholder { /* IE 10+ */
     color: $color;
+    opacity: $opacity;
   }
-  ::-ms-input-placeholder { /* Edge */
+  &::-ms-input-placeholder { /* Edge */
     color: $color;
+    opacity: $opacity;
   }
-  :placeholder-shown { /* Standard one last! */
+  &:placeholder-shown { /* Standard one last! */
     color: $color;
+    opacity: $opacity;
   }
 }
 //*********************************************************************************/

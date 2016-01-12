@@ -97,11 +97,13 @@ b, strong{
 }
 
 textarea{
+  font-family: "roboto", sans-serif;
   resize: none;
   box-shadow: none;
   border-radius: 0px;
 }
 input{
+  font-family: "roboto", sans-serif;
   box-shadow: none;
   border-radius: 0px;
 }
@@ -113,6 +115,24 @@ a, input, textarea{
   &:focus{
     outline: none;
   }
+}
+::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  font-family: "roboto", sans-serif;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-family: "roboto", sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-family: "roboto", sans-serif;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-family: "roboto", sans-serif;
+}
+::-ms-input-placeholder { /* Edge */
+  font-family: "roboto", sans-serif;
+}
+:placeholder-shown { /* Standard one last! */
+  font-family: "roboto", sans-serif;
 }
 .hide{
   display: none;

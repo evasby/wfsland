@@ -1,6 +1,7 @@
 .reviews{
   @include wide{
     background-color: #eaf0f3;
+    padding-bottom: 70px;
   }
   &_inner{
     @include wide{
@@ -45,5 +46,32 @@
   }
   &_link{
     @include link(#24a7c4, #24a7c4);
+  }
+  &_button{
+    display: none;
+    @include wide {
+      position: relative;
+      z-index: 10;
+      display: inline-block;
+      padding: 0px 30px 6px 30px;
+      border: none;
+      border-left: 1px solid #e90f51;
+      border-right: 1px solid #e90f51;
+      border-radius: 7px;
+      @include link(#fff, #fff);
+      font-size: 24px;
+      line-height: 71px;
+      text-decoration: none;
+      background-image: url('../images/button-bac.jpg');
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+    }
+    &:hover{
+      background-image: url('../images/button-mobile-bac-h.jpg');
+      cursor: pointer;
+      @include wide {
+        background-image: url('../images/button-bac-h.jpg');
+      }
+    }
   }
 }

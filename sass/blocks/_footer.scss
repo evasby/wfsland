@@ -1,3 +1,37 @@
 .footer{
   height: 410px;
+	&_wrap{
+		padding: 15px;
+	}
+  &_phone{
+		font-size: 22px;
+		margin-bottom: 18px;
+		padding-left: 25px;
+		position: relative;
+		&:before{
+			content:"";
+			position: absolute;
+			top: 1px;
+			left: 0px;
+			width: 17px;
+			height: 17px;
+			background: url('../images/footer-phone.png') no-repeat;
+		}
+  }
+  &_address{
+  	font-size: 22px;
+  	line-height: 25px;
+  	margin-bottom: 18px;
+  	padding-left: 25px;
+  	position: relative;
+  	&:before{
+			content:"";
+			position: absolute;
+			top: 5px;
+			left: 0px;
+			width: 14px;
+			height: 19px;
+			background: url('../images/footer-address.png') no-repeat;
+		}
+  }
 }
