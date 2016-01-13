@@ -69,6 +69,11 @@ gulp.task('clean', function () {
     return gulp.src('dist', {read: false})
         .pipe(clean());
 });
+// CleanJS
+gulp.task('cleanJS', function () {
+    return gulp.src('dist/js', {read: false})
+        .pipe(clean());
+});
 
 // imageMin
 gulp.task('imageMin', function () {
@@ -96,13 +101,10 @@ gulp.task('fonts', function() {
       .pipe(gulp.dest('dist'));
 });*/
 gulp.task('build', ['clean'], function () {
-    //var assets = useref.assets();
     return gulp.src('app/*.html')
-      //.pipe(assets)
+      .pipe(useref())
       .pipe(gulpif('*.js', uglify()))
       .pipe(gulpif('*.css', minifyCss({compatibility: 'ie7'})))
-      //.pipe(assets.restore())
-      .pipe(useref())
       .pipe(gulp.dest('dist'));
 });
 

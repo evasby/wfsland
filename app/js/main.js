@@ -1,4 +1,12 @@
 $(document).ready(function(){
+  /*TEMP******************************/
+  $('header .button').colorbox({
+    inline: true,
+    href: "#popupFeedback",
+  });
+
+  
+  /***********************************/
   $(".menu_toggle").click(function() {
     $(this).toggleClass("menu_toggle__on");
     //$(".main-mnu").slideToggle();
@@ -12,8 +20,19 @@ $(document).ready(function(){
   $(window).resize(function() {
     heightDetect();
   });
+  /***********************************/
+  $('[data-type="background"]').each(function(){
+      var $bgobj = $(this); // создаем объект
+      $(window).scroll(function() {
+          var yPos = -($(window).scrollTop() / $bgobj.data('speed')); // вычисляем коэффициент 
+          // Присваиваем значение background-position
+          var coords = 'center '+ yPos + 'px';
+          // Создаем эффект Parallax Scrolling
+          $bgobj.css({ backgroundPosition: coords });
+      });
+  });
+
   $('.slider_list').bxSlider({
-    //slideWidth: 181,
     mode: 'fade',
     minSlides: 1,
     maxSlides: 1,

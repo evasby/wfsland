@@ -57,6 +57,7 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    background-attachment: fixed;
     &__1{
       background-image: url('../images/header-bac-480-4.jpg');
       @include wide {

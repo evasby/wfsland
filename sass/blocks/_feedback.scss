@@ -6,6 +6,9 @@
     background-image: url('../images/feedback-bac-1920.jpg');
     padding-bottom: 70px;
   }
+  &_wrap{
+    @include clearfix;
+  }
   h2{
     color: #ffffff;
     & + p{
@@ -60,6 +63,10 @@
       line-height: 36px;
       width: 100%;
       opacity: 0.5;
+      &.error{
+        border-color: red;
+        box-shadow: 0px 0px 2px 0px rgba(255,0,0,1);
+      }
       @include wide {
         font-size: 18px;
         line-height: 62px;
@@ -75,6 +82,10 @@
       line-height: 36px;
       width: 100%;
       opacity: 0.5;
+      &.error{
+        border-color: red;
+        box-shadow: 0px 0px 2px 0px rgba(255,0,0,1);
+      }
       @include wide {
         height: 145px;
         font-size: 18px;
@@ -84,5 +95,63 @@
       }
     }
   }
-
+  &_submit{
+    position: relative;
+    input{
+      width: 100%;
+      text-align: center;
+      font-size: 15px;
+      padding: 0px 14px 6px 14px;
+      position: relative;
+      z-index: 10;
+      display: inline-block;
+      border: none;
+      border-left: 1px solid #e90f51;
+      border-right: 1px solid #e90f51;
+      border-radius: 7px;
+      line-height: 47px;
+      @include link(#fff, #fff);
+      text-decoration: none;
+      background-color: #bc0a39;
+      background-image: url('../images/button-mobile-bac.jpg'); 
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      @include wide {
+        line-height: 71px;
+        background-image: url('../images/button-bac.jpg');
+        font-size: 24px;
+        padding: 0px 95px 6px 95px;
+        width: auto;
+        margin-top: 25px;
+      }
+      &:hover{
+        background-image: url('../images/button-mobile-bac-h.jpg');
+        cursor: pointer;
+        @include wide {
+          background-image: url('../images/button-bac-h.jpg');
+        }
+      }
+    }
+    .ajax-progress{
+      position: absolute;
+      z-index: 11;
+      top: 50%;
+      right: -28px;
+      margin-top: -7px;
+      @include wide{
+        right: -35px;
+        margin-top: -2px;
+      }
+      .throbber {
+        background: transparent url('../images/popup-loader.gif') no-repeat 0px 0px;
+        float: left;
+        height: 25px;
+        width: 25px;
+        margin: 0px;
+      }
+    }
+  }
+  .messages{
+    display: none;
+  }
 }

@@ -224,6 +224,215 @@ a:focus, input:focus, textarea:focus {
 .hide {
   display: none; }
 
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden; }
+
+#cboxWrapper {
+  max-width: none; }
+
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%; }
+
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left; }
+
+#cboxContent {
+  position: relative; }
+
+#cboxLoadedContent {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+
+#cboxTitle {
+  margin: 0; }
+
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer; }
+
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+  -ms-interpolation-mode: bicubic; }
+
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+#colorbox, #cboxContent, #cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; }
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxContent {
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+#cboxOverlay {
+  background: #070e12;
+  opacity: 0.4;
+  filter: alpha(opacity=90); }
+
+#colorbox {
+  outline: 0; }
+
+#cboxTopLeft {
+  width: 14px;
+  height: 14px; }
+
+#cboxTopCenter {
+  height: 14px; }
+
+#cboxTopRight {
+  width: 14px;
+  height: 14px; }
+
+#cboxBottomLeft {
+  width: 14px;
+  height: 43px; }
+
+#cboxBottomCenter {
+  height: 43px; }
+
+#cboxBottomRight {
+  width: 14px;
+  height: 43px; }
+
+#cboxMiddleLeft {
+  width: 14px; }
+
+#cboxMiddleRight {
+  width: 14px; }
+
+#cboxContent {
+  background: #fff;
+  overflow: visible; }
+
+.cboxIframe {
+  background: #fff; }
+
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc; }
+
+#cboxLoadedContent {
+  margin-bottom: 5px; }
+
+#cboxLoadingOverlay {
+  background: url(../image/colorbox/loading_background.png) no-repeat center center; }
+
+#cboxLoadingGraphic {
+  background: url(../image/colorbox/loading.gif) no-repeat center center; }
+
+#cboxTitle {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  color: #7C7C7C; }
+
+#cboxCurrent {
+  position: absolute;
+  bottom: -25px;
+  left: 58px;
+  font-weight: bold;
+  color: #7C7C7C; }
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  bottom: -29px;
+  background: url(../image/colorbox/controls.png) no-repeat 0px 0px;
+  width: 23px;
+  height: 23px;
+  text-indent: -9999px; }
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
+  outline: 0; }
+
+#cboxPrevious {
+  left: 0px;
+  background-position: -51px -25px; }
+
+#cboxPrevious:hover {
+  background-position: -51px 0px; }
+
+#cboxNext {
+  left: 27px;
+  background-position: -75px -25px; }
+
+#cboxNext:hover {
+  background-position: -75px 0px; }
+
+#cboxClose {
+  background: url(../images/popup-close.png) no-repeat 0px 0px;
+  bottom: auto;
+  width: 19px;
+  height: 19px;
+  top: 10px;
+  right: 10px;
+  background-position: 0px 0px;
+  background-size: 100%;
+  opacity: 0.8; }
+  @media screen and (min-width: 800px) {
+    #cboxClose {
+      width: 37px;
+      height: 37px;
+      top: 16px;
+      right: 20px; } }
+
+#cboxClose:hover {
+  opacity: 1; }
+
+.cboxSlideshow_on #cboxSlideshow {
+  background-position: -125px 0px;
+  right: 27px; }
+
+.cboxSlideshow_on #cboxSlideshow:hover {
+  background-position: -150px 0px; }
+
+.cboxSlideshow_off #cboxSlideshow {
+  background-position: -150px -25px;
+  right: 27px; }
+
+.cboxSlideshow_off #cboxSlideshow:hover {
+  background-position: -125px 0px; }
+
 .header {
   position: relative;
   padding: 42px 0px 0px 0px;
@@ -322,7 +531,8 @@ a:focus, input:focus, textarea:focus {
     height: 100% !important;
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover; }
+    background-size: cover;
+    background-attachment: fixed; }
     .slider_item__1 {
       background-image: url("../images/header-bac-480-4.jpg"); }
       @media screen and (min-width: 800px) {
@@ -1311,6 +1521,13 @@ a:focus, input:focus, textarea:focus {
     .feedback {
       background-image: url("../images/feedback-bac-1920.jpg");
       padding-bottom: 70px; } }
+  .feedback_wrap:before, .feedback_wrap:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .feedback_wrap:after {
+    clear: both; }
   .feedback h2 {
     color: #ffffff; }
     .feedback h2 + p {
@@ -1366,6 +1583,10 @@ a:focus, input:focus, textarea:focus {
       line-height: 36px;
       width: 100%;
       opacity: 0.5; }
+      .feedback_inner input.error {
+        border-color: red;
+        -webkit-box-shadow: 0px 0px 2px 0px red;
+        box-shadow: 0px 0px 2px 0px red; }
       @media screen and (min-width: 800px) {
         .feedback_inner input {
           font-size: 18px;
@@ -1404,6 +1625,10 @@ a:focus, input:focus, textarea:focus {
       line-height: 36px;
       width: 100%;
       opacity: 0.5; }
+      .feedback_inner textarea.error {
+        border-color: red;
+        -webkit-box-shadow: 0px 0px 2px 0px red;
+        box-shadow: 0px 0px 2px 0px red; }
       @media screen and (min-width: 800px) {
         .feedback_inner textarea {
           height: 145px;
@@ -1434,6 +1659,68 @@ a:focus, input:focus, textarea:focus {
             /* Standard one last! */
             color: #191919;
             opacity: 1; } }
+  .feedback_submit {
+    position: relative; }
+    .feedback_submit input {
+      width: 100%;
+      text-align: center;
+      font-size: 15px;
+      padding: 0px 14px 6px 14px;
+      position: relative;
+      z-index: 10;
+      display: inline-block;
+      border: none;
+      border-left: 1px solid #e90f51;
+      border-right: 1px solid #e90f51;
+      -webkit-border-radius: 7px;
+      border-radius: 7px;
+      line-height: 47px;
+      color: #fff;
+      text-decoration: none;
+      background-color: #bc0a39;
+      background-image: url("../images/button-mobile-bac.jpg");
+      background-repeat: repeat-x;
+      background-size: auto 100%; }
+      .feedback_submit input:link {
+        color: #fff; }
+      .feedback_submit input:visited {
+        color: #fff; }
+      .feedback_submit input:hover {
+        color: #fff; }
+      .feedback_submit input:active {
+        color: #fff; }
+      @media screen and (min-width: 800px) {
+        .feedback_submit input {
+          line-height: 71px;
+          background-image: url("../images/button-bac.jpg");
+          font-size: 24px;
+          padding: 0px 95px 6px 95px;
+          width: auto;
+          margin-top: 25px; } }
+      .feedback_submit input:hover {
+        background-image: url("../images/button-mobile-bac-h.jpg");
+        cursor: pointer; }
+        @media screen and (min-width: 800px) {
+          .feedback_submit input:hover {
+            background-image: url("../images/button-bac-h.jpg"); } }
+    .feedback_submit .ajax-progress {
+      position: absolute;
+      z-index: 11;
+      top: 50%;
+      right: -28px;
+      margin-top: -7px; }
+      @media screen and (min-width: 800px) {
+        .feedback_submit .ajax-progress {
+          right: -35px;
+          margin-top: -2px; } }
+      .feedback_submit .ajax-progress .throbber {
+        background: transparent url("../images/popup-loader.gif") no-repeat 0px 0px;
+        float: left;
+        height: 25px;
+        width: 25px;
+        margin: 0px; }
+  .feedback .messages {
+    display: none; }
 
 .footer {
   height: 410px; }
@@ -1466,3 +1753,123 @@ a:focus, input:focus, textarea:focus {
       width: 14px;
       height: 19px;
       background: url("../images/footer-address.png") no-repeat; }
+
+.popup {
+  width: 280px;
+  padding: 29px; }
+  @media screen and (min-width: 800px) {
+    .popup {
+      width: 540px;
+      padding: 52px 79px 49px 79px; } }
+  .popup_title {
+    font-family: "robotoBold", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px; }
+    @media screen and (min-width: 800px) {
+      .popup_title {
+        font-size: 46px;
+        margin-bottom: 30px; } }
+  .popup_inner {
+    margin-bottom: 6px; }
+    @media screen and (min-width: 800px) {
+      .popup_inner {
+        margin-bottom: 10px; } }
+    .popup_inner input {
+      border: 1px solid #191a20;
+      width: 100%;
+      padding: 0px 8px;
+      font-size: 12px;
+      line-height: 38px; }
+      .popup_inner input::-webkit-input-placeholder {
+        /* Safari, Chrome and Opera */
+        color: #101111;
+        opacity: 1; }
+      .popup_inner input:-moz-placeholder {
+        /* Firefox 18- */
+        color: #101111;
+        opacity: 1; }
+      .popup_inner input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #101111;
+        opacity: 1; }
+      .popup_inner input:-ms-input-placeholder {
+        /* IE 10+ */
+        color: #101111;
+        opacity: 1; }
+      .popup_inner input::-ms-input-placeholder {
+        /* Edge */
+        color: #101111;
+        opacity: 1; }
+      .popup_inner input:placeholder-shown {
+        /* Standard one last! */
+        color: #101111;
+        opacity: 1; }
+      .popup_inner input.error {
+        border-color: red;
+        -webkit-box-shadow: 0px 0px 2px 0px red;
+        box-shadow: 0px 0px 2px 0px red; }
+      @media screen and (min-width: 800px) {
+        .popup_inner input {
+          font-size: 18px;
+          line-height: 68px; } }
+  .popup_submit {
+    position: relative; }
+    .popup_submit input {
+      position: relative;
+      z-index: 10;
+      display: inline-block;
+      width: 100%;
+      padding: 0px 0px 6px 0px;
+      margin-top: 10px;
+      border: none;
+      border-left: 1px solid #e90f51;
+      border-right: 1px solid #e90f51;
+      -webkit-border-radius: 7px;
+      border-radius: 7px;
+      font-size: 18px;
+      line-height: 47px;
+      color: #fff;
+      text-decoration: none;
+      background-color: #bc0a39;
+      background-image: url("../images/button-mobile-bac.jpg");
+      background-repeat: repeat-x;
+      background-size: auto 100%; }
+      .popup_submit input:link {
+        color: #fff; }
+      .popup_submit input:visited {
+        color: #fff; }
+      .popup_submit input:hover {
+        color: #fff; }
+      .popup_submit input:active {
+        color: #fff; }
+      @media screen and (min-width: 800px) {
+        .popup_submit input {
+          font-size: 30px;
+          line-height: 69px;
+          background-image: url("../images/button-bac.jpg");
+          margin-top: 20px; } }
+      .popup_submit input:hover {
+        background-image: url("../images/button-mobile-bac-h.jpg");
+        cursor: pointer; }
+        @media screen and (min-width: 800px) {
+          .popup_submit input:hover {
+            background-image: url("../images/button-bac-h.jpg"); } }
+    .popup_submit .ajax-progress {
+      position: absolute;
+      z-index: 11;
+      top: 50%;
+      right: -28px;
+      margin-top: -7px; }
+      @media screen and (min-width: 800px) {
+        .popup_submit .ajax-progress {
+          right: -35px;
+          margin-top: -2px; } }
+      .popup_submit .ajax-progress .throbber {
+        background: transparent url("../images/popup-loader.gif") no-repeat 0px 0px;
+        float: left;
+        height: 25px;
+        width: 25px;
+        margin: 0px; }
+  .popup .messages {
+    display: none; }

@@ -17,10 +17,10 @@
     <header id="header" class="header">
       <div class="slider">
         <ul class="slider_list">
-          <li class="slider_item slider_item__1"></li>
-          <li class="slider_item slider_item__2"></li>
-          <li class="slider_item slider_item__3"></li>
-          <li class="slider_item slider_item__4"></li>
+          <li class="slider_item slider_item__1" data-type="background" data-speed="10"></li>
+          <li class="slider_item slider_item__2" data-type="background" data-speed="10"></li>
+          <li class="slider_item slider_item__3" data-type="background" data-speed="10"></li>
+          <li class="slider_item slider_item__4" data-type="background" data-speed="10"></li>
         </ul>
       </div>
       <div class="inner">
@@ -45,7 +45,8 @@
         </nav>
         <h1>Создание landing page</h1>
         <p>С гарантией конверсии <b>от 10% до 30%</b></p>
-        <a href="#" class="button">Связаться с нами</a>
+        <a href="#" class="button colorbox-inline">Связаться с нами</a>
+        <!-- <a href="?width=525&amp;height=446&amp;inline=true#popupFeedback" class="button colorbox-inline">Связаться с нами</a> -->
       </div>
     </header>
     <section id="about" class="about">
@@ -319,12 +320,23 @@
           <div class="feedback_inner feedback_inner__textarea">
             <textarea type="text" placeholder="Введите Ваш вопрос"></textarea>
           </div>
-          <input type="submit" class="button" value="Отправить">
+          <div class="feedback_submit"><input type="submit" value="Отправить"></div>
         </form>
       </div>
     </section>
     <footer id="footer" class="footer"></footer>
   </main>
+  <div class="hide">
+  	<div class="popup" id="popupFeedback">
+  		<form action="#">
+  			<div class="popup_title">Обратная связь</div>
+  			<div class="popup_inner"><input type="text" placeholder="Введите Ваше имя"></div>
+  			<div class="popup_inner"><input type="text" placeholder="Введите Ваш e-mail"></div>
+  			<div class="popup_inner"><input type="text" placeholder="Введите Ваш телефон"></div>
+        <div class="popup_submit"><input type="submit" value="Связаться с нами"><div class="ajax-progress"><div class="throbber"></div></div></div>
+  		</form>
+  	</div>
+  </div>
   <!--[if lte IE 8]>
     <script src="js/respond.min.js"></script>
   <![endif]-->

@@ -4,6 +4,7 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "susy": "~2.2.9",
-    "bxslider-4": "fafnur-bxslider#~4.2.5"
+    "bxslider-4": "fafnur-bxslider#~4.2.5",
+    "jquery-colorbox": "colorbox#~1.6.3"
   }
 }
