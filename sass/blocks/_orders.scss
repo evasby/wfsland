@@ -27,15 +27,6 @@
       margin-bottom: 70px;
     }
   }
-  .button{
-    width: 100%;
-    text-align: center;
-    font-size: 15px;
-    padding: 0px 14px 6px 14px;
-    @include wide{
-      font-size: 23px;
-    }
-  }
   &_inner{
     margin-bottom: 10px;
     input{
@@ -44,11 +35,72 @@
       border-radius: 3px;
       line-height: 36px;
       width: 100%;
+      &.error{
+        border-color: red;
+        box-shadow: 0px 0px 2px 0px rgba(255,0,0,1);
+      }
       @include wide{
         font-size: 18px;
         line-height: 68px;
         padding: 0px 20px;
       }
     }
+  }
+  &_submit{
+    position: relative;
+    input{
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      display: inline-block;
+      padding: 0px 14px 6px 14px;
+      border: none;
+      border-left: 1px solid #e90f51;
+      border-right: 1px solid #e90f51;
+      border-radius: 7px;
+      font-size: 15px;
+      line-height: 47px;
+      @include link(#fff, #fff);
+      text-decoration: none;
+      background-color: #bc0a39;
+      background-image: url('../images/button-mobile-bac.jpg'); 
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      @include wide {
+        padding: 0px 0px 6px 0px;
+        font-size: 23px;
+        line-height: 71px;
+        background-image: url('../images/button-bac.jpg');
+      }
+      &:hover{
+        background-image: url('../images/button-mobile-bac-h.jpg');
+        cursor: pointer;
+        @include wide {
+          background-image: url('../images/button-bac-h.jpg');
+        }
+      }
+    }
+    .ajax-progress{
+      position: absolute;
+      z-index: 11;
+      top: 50%;
+      right: -28px;
+      margin-top: -8px;
+      @include wide{
+        right: -30px;
+        margin-top: -10px;
+      }
+      .throbber {
+        background: transparent url('../images/popup-loader.gif') no-repeat 0px 0px;
+        float: left;
+        height: 25px;
+        width: 25px;
+        margin: 0px;
+      }
+    }
+  }
+  .messages{
+    display: none;
   }
 }

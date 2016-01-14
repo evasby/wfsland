@@ -140,3 +140,7 @@ a, input, textarea{
 .inner{
 
 }
+//@include wide{
+.captcha{
+  overflow: hidden;
+}
