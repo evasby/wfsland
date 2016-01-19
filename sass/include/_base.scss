@@ -143,4 +143,27 @@ a, input, textarea{
 //@include wide{
 .captcha{
   overflow: hidden;
+  .orders_submit &{
+    margin-bottom: 8px;
+    @include wide{
+      margin-bottom: 10px;
+    }
+  }
+  .feedback_submit &{
+    margin-bottom: 10px;
+    @include wide{
+      margin-top: 10px;
+      margin-bottom: -10px;
+    } 
+  }
+  .popup_submit &{
+    padding-top: 1px;
+    margin-bottom: -3px;
+    @include wide{
+      margin-bottom: -10px;
+    }
+  }
+}
+.drupal-recaptcha > div > div{
+  margin: 0 auto;
 }

@@ -226,6 +226,26 @@ a:focus, input:focus, textarea:focus {
 
 .captcha {
   overflow: hidden; }
+  .orders_submit .captcha {
+    margin-bottom: 8px; }
+    @media screen and (min-width: 800px) {
+      .orders_submit .captcha {
+        margin-bottom: 10px; } }
+  .feedback_submit .captcha {
+    margin-bottom: 10px; }
+    @media screen and (min-width: 800px) {
+      .feedback_submit .captcha {
+        margin-top: 10px;
+        margin-bottom: -10px; } }
+  .popup_submit .captcha {
+    padding-top: 1px;
+    margin-bottom: -3px; }
+    @media screen and (min-width: 800px) {
+      .popup_submit .captcha {
+        margin-bottom: -10px; } }
+
+.drupal-recaptcha > div > div {
+  margin: 0 auto; }
 
 /*
     Colorbox Core Style:
@@ -944,6 +964,8 @@ a:focus, input:focus, textarea:focus {
         list-style-image: url("../images/google-partner-arrow-wide.png"); } }
   .google-partner_item {
     text-align: left; }
+  .google-partner_link {
+    display: block; }
 
 .certificates {
   padding-bottom: 10px; }
@@ -1191,13 +1213,12 @@ a:focus, input:focus, textarea:focus {
   .orders_submit .ajax-progress {
     position: absolute;
     z-index: 11;
-    top: 50%;
-    right: -28px;
-    margin-top: -8px; }
+    bottom: 15px;
+    right: -28px; }
     @media screen and (min-width: 800px) {
       .orders_submit .ajax-progress {
         right: -30px;
-        margin-top: -10px; } }
+        bottom: 25px; } }
     .orders_submit .ajax-progress .throbber {
       background: transparent url("../images/popup-loader.gif") no-repeat 0px 0px;
       float: left;
@@ -1899,13 +1920,13 @@ a:focus, input:focus, textarea:focus {
     .feedback_submit .ajax-progress {
       position: absolute;
       z-index: 11;
-      top: 50%;
-      right: -28px;
-      margin-top: -7px; }
+      bottom: 15px;
+      right: -28px; }
       @media screen and (min-width: 800px) {
         .feedback_submit .ajax-progress {
-          right: -35px;
-          margin-top: -2px; } }
+          right: 50%;
+          margin-right: -190px;
+          bottom: 25px; } }
       .feedback_submit .ajax-progress .throbber {
         background: transparent url("../images/popup-loader.gif") no-repeat 0px 0px;
         float: left;
@@ -2055,13 +2076,12 @@ a:focus, input:focus, textarea:focus {
     .popup_submit .ajax-progress {
       position: absolute;
       z-index: 11;
-      top: 50%;
-      right: -28px;
-      margin-top: -7px; }
+      bottom: 15px;
+      right: -28px; }
       @media screen and (min-width: 800px) {
         .popup_submit .ajax-progress {
           right: -35px;
-          margin-top: -2px; } }
+          bottom: 25px; } }
       .popup_submit .ajax-progress .throbber {
         background: transparent url("../images/popup-loader.gif") no-repeat 0px 0px;
         float: left;

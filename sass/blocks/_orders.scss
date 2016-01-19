@@ -84,12 +84,11 @@
     .ajax-progress{
       position: absolute;
       z-index: 11;
-      top: 50%;
+      bottom: 15px;
       right: -28px;
-      margin-top: -8px;
       @include wide{
         right: -30px;
-        margin-top: -10px;
+        bottom: 25px;
       }
       .throbber {
         background: transparent url('../images/popup-loader.gif') no-repeat 0px 0px;
