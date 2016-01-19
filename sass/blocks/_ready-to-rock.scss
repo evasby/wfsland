@@ -1,0 +1,31 @@
+.ready-to-rock{
+  padding-bottom: 18px;
+  @include wide{
+    width: 940px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+  }
+  &_image{
+    height: 166px;
+    background: url('../images/ready-to-rock.jpg') no-repeat;
+    background-size: cover;
+    margin-bottom: 35px;
+    @include wide{
+      height: 253px;
+      background: url('../images/ready-to-rock-wide.jpg') no-repeat;
+      margin-bottom: 29px;
+    }
+  }
+  p{
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+    width: 280px;
+    margin: 0 auto 20px auto;
+    @include wide{
+      width: auto;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.up{
+  display: none;
+  background: url('../images/arrow-up.png') no-repeat;
+  width: 64px;
+  height: 65px;
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  margin-top: -32px;
+  opacity: 0.5;
+  z-index: 10;
+  transition: 0.2s opacity;
+  &:hover{
+    opacity: 0.7;
+  }
+  &__show{
+    display: block;
+  }
+}

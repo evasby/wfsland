@@ -439,7 +439,7 @@ a:focus, input:focus, textarea:focus {
 .header {
   position: relative;
   padding: 42px 0px 0px 0px;
-  min-height: 350px; }
+  min-height: 390px; }
   @media screen and (min-width: 800px) {
     .header {
       padding: 0px; } }
@@ -485,6 +485,7 @@ a:focus, input:focus, textarea:focus {
       float: right; } }
 
 .slider {
+  background-color: #5a5a5a;
   position: absolute;
   z-index: 0;
   top: 0px;
@@ -902,6 +903,48 @@ a:focus, input:focus, textarea:focus {
         .portfolio_button:hover {
           background-image: url("../images/button-bac-h.jpg"); } }
 
+.google-partner {
+  *zoom: 1;
+  font-size: 14px;
+  line-height: 23px; }
+  .google-partner:before, .google-partner:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .google-partner:after {
+    clear: both; }
+  @media screen and (min-width: 800px) {
+    .google-partner {
+      padding-top: 17px;
+      font-size: 24px;
+      line-height: 27px; } }
+  .google-partner_side {
+    width: 263px;
+    margin: 0 auto 16px auto; }
+    @media screen and (min-width: 800px) {
+      .google-partner_side {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+        float: left;
+        margin: 0 auto 41px auto;
+        padding: 7px; } }
+    .google-partner_side img {
+      display: block;
+      width: 100%;
+      height: auto;
+      -webkit-box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.4);
+      box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.4); }
+  .google-partner_list {
+    list-style-image: url("../images/google-partner-arrow.png");
+    list-style-position: inside; }
+    @media screen and (min-width: 800px) {
+      .google-partner_list {
+        list-style-image: url("../images/google-partner-arrow-wide.png"); } }
+  .google-partner_item {
+    text-align: left; }
+
 .certificates {
   padding-bottom: 10px; }
   @media screen and (min-width: 800px) {
@@ -1023,6 +1066,35 @@ a:focus, input:focus, textarea:focus {
       color: #ce0137; }
     .magazines_link:active {
       color: #ce0137; }
+
+.ready-to-rock {
+  padding-bottom: 18px; }
+  @media screen and (min-width: 800px) {
+    .ready-to-rock {
+      width: 940px;
+      margin: 0 auto;
+      padding-bottom: 45px; } }
+  .ready-to-rock_image {
+    height: 166px;
+    background: url("../images/ready-to-rock.jpg") no-repeat;
+    background-size: cover;
+    margin-bottom: 35px; }
+    @media screen and (min-width: 800px) {
+      .ready-to-rock_image {
+        height: 253px;
+        background: url("../images/ready-to-rock-wide.jpg") no-repeat;
+        margin-bottom: 29px; } }
+  .ready-to-rock p {
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+    width: 280px;
+    margin: 0 auto 20px auto; }
+    @media screen and (min-width: 800px) {
+      .ready-to-rock p {
+        width: auto;
+        font-size: 24px;
+        line-height: 30px; } }
 
 .orders_title {
   font-size: 18px;
@@ -1483,14 +1555,18 @@ a:focus, input:focus, textarea:focus {
   left: 0px;
   width: 100%;
   height: 100%;
-  padding: 25px 25px 0px 25px;
+  padding: 5px 0px 0px 25px;
   background-color: #f8c50f;
   z-index: 1;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
-  text-align: left; }
+  text-align: left;
+  list-style-type: decimal; }
   .howto_item:hover .howto_descr {
     display: block; }
+
+.howto_li {
+  margin-bottom: 5px; }
 
 .howto_name {
   font-size: 18px;
@@ -1579,7 +1655,8 @@ a:focus, input:focus, textarea:focus {
   text-align: left; }
   @media screen and (min-width: 800px) {
     .reviews_body {
-      padding: 12px 22px 12px 22px; } }
+      padding: 12px 22px 12px 22px;
+      min-height: 295px; } }
 
 .reviews_link {
   color: #24a7c4; }
@@ -1841,10 +1918,13 @@ a:focus, input:focus, textarea:focus {
 .footer {
   height: 410px; }
   .footer_wrap {
-    padding: 15px; }
+    padding: 15px;
+    padding-bottom: 0px;
+    min-height: 175px;
+    width: 360px; }
   .footer_phone {
     font-size: 22px;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     padding-left: 25px;
     position: relative; }
     .footer_phone:before {
@@ -1858,7 +1938,7 @@ a:focus, input:focus, textarea:focus {
   .footer_address {
     font-size: 22px;
     line-height: 25px;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     padding-left: 25px;
     position: relative; }
     .footer_address:before {
@@ -1990,3 +2070,21 @@ a:focus, input:focus, textarea:focus {
         margin: 0px; }
   .popup .messages {
     display: none; }
+
+.up {
+  display: none;
+  background: url("../images/arrow-up.png") no-repeat;
+  width: 64px;
+  height: 65px;
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  margin-top: -32px;
+  opacity: 0.5;
+  z-index: 10;
+  -webkit-transition: 0.2s opacity;
+  transition: 0.2s opacity; }
+  .up:hover {
+    opacity: 0.7; }
+  .up__show {
+    display: block; }

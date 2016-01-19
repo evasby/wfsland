@@ -1,4 +1,34 @@
 $(document).ready(function(){
+  /***********************************/
+  /***********************************/
+  /***********************************/
+  /***********************************/
+  /***********************************/
+  $('.up').click(function(e){
+    e.preventDefault();
+    $.scrollTo($(this).attr('href'), 400);
+  });
+  /***********************************/
+  $('.menu_link').each(function(){
+    $(this).click(function(e){
+      e.preventDefault();
+      $.scrollTo('#' + $(this).attr('href'), 400);
+    });
+  });
+  /***********************************/
+  /***********************************/
+  /***********************************/
+  /***********************************/
+  var waypointUp = new Waypoint({
+    element: document.getElementById('about'),
+    handler: function(direction) {
+      if (direction == 'down') {
+         $('.up').addClass('up__show');
+      } else {
+         $('.up').removeClass('up__show');
+      }
+    }
+  })
   /*TEMP******************************/
   $('header .button').colorbox({
     inline: true,

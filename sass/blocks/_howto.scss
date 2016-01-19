@@ -142,15 +142,19 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    padding: 25px 25px 0px 25px;
+    padding: 5px 0px 0px 25px;
     background-color: #f8c50f;
     z-index: 1;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
     text-align: left;
+    list-style-type: decimal;
     .howto_item:hover &{
       display: block;
     }
+  }
+  &_li{
+    margin-bottom: 5px;
   }
   &_name{
     font-size: 18px;
