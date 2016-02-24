@@ -9,6 +9,7 @@
   }
   &_inner{
     @include clearfix;
+    overflow: hidden;
   }
   &_item{
     width: 280px;

@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     plumberNotifier = require('gulp-plumber-notifier'),
     plumber = require('gulp-plumber'),
     wait = require('gulp-wait'),
+    ftp = require( 'vinyl-ftp' );
     imagemin = require('gulp-imagemin');
 
 // server connect
@@ -64,6 +65,29 @@ gulp.task('css', function () {
 //      }));
 //});
 
+// FTP
+gulp.task('ftp', function () {
+ 
+	var conn = ftp.create( {
+		host:     'webformat.by',
+		user:     'user1111744',
+		password: 'user1HHgsdf5F'
+	});
+ 
+	var globs = [
+		'app/css/**'
+	];
+ 
+	// using base = '.' will transfer everything to /public_html correctly 
+	// turn off buffering in gulp.src for best performance 
+ 
+	return gulp.src( globs, { buffer: false } )
+		//.pipe(wait(3000))
+		.pipe( conn.newer( '/www/landing.webformat.by' ) ) // only upload newer files 
+		.pipe( conn.dest( '/www/landing.webformat.by/sites/all/themes/landingNew/css/' ) )
+		.pipe(notify('FTP - Done!'));
+});
+
 // Clean
 gulp.task('clean', function () {
     return gulp.src('dist', {read: false})
@@ -80,6 +104,13 @@ gulp.task('imageMin', function () {
     return gulp.src('app/images/**/*.*')
       .pipe(imagemin())
       .pipe(gulp.dest('dist/images'));
+});
+
+//JS
+gulp.task('js', function () {
+    return gulp.src('ignore/js/main.js')
+      .pipe(gulpif('*.js', uglify()))
+      .pipe(gulp.dest('ignore/js/min'));
 });
 
 
@@ -121,6 +152,7 @@ gulp.task('watch', function () {
   gulp.watch('sass/**/*.scss', ['css']);
   gulp.watch('bower.json', ['bower']);
   gulp.watch('app/index.html', ['html']);
+  gulp.watch('app/css/*', ['ftp']);
 });
 
 // default

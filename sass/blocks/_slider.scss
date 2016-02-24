@@ -6,6 +6,10 @@
   left: 0px;
   width: 100%;
   height: 100%;
+  display: none;
+  @include wide{
+    display: block;
+  }
   .bx-viewport, .bx-wrapper{
     position: relative;
     width: 100%;
@@ -81,6 +85,12 @@
       background-image: url('../images/header-bac-480-1.jpg');
       @include wide {
         background-image: url('../images/header-bac-1920-1.jpg');
+      }
+    }
+    &__5{
+      //background-image: url('../images/header-bac-480-5.jpg');
+      @include wide {
+        background-image: url('../images/header-bac-1920-5.jpg');
       }
     }
   }
