@@ -4335,7 +4335,8 @@ a:focus, input:focus, textarea:focus {
             color: #191919;
             opacity: 1; } }
   .feedback_submit {
-    position: relative; }
+    position: relative;
+    padding: 0 5px; }
     .feedback_submit input {
       width: 100%;
       text-align: center;
